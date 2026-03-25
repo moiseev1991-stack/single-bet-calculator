@@ -1,0 +1,287 @@
+**Title:** Betting Margin Calculator: Odds Overround | Official 2026
+
+ **Description:** Free UK tool to compute bookmaker margin, overround, and fair odds for 2‑way and 3‑way markets. Supports decimal, fractional, American. Fast, accurate, and official.
+
+# Betting Margin Calculator
+
+Compute bookmaker margin (overround), fair odds, and implied hold in seconds. Built for bettors in London and across the UK, it supports decimal, fractional, and American formats for 2‑way and 3‑way markets. Free to use—informational only; bet responsibly.
+
+## What is a betting margin (overround) and why does it matter?
+
+Betting margin—also called overround, vigorish, or juice—is the built‑in edge a sportsbook takes on a market. It is calculated from the prices offered on all mutually exclusive outcomes. If you convert each selection’s odds into implied probability and add them together, a fair market would total 100%. Anything above 100% is the margin. That excess represents the bookmaker’s theoretical commission for making a market and managing risk.
+
+- Margin tells you how “expensive” a market is: lower margins mean better value for bettors, all else equal.
+- It varies by sport, league, and market type (major football leagues and two‑way lines often carry lower margins than niche or player prop markets).
+- Removing the margin yields “fair odds,” which are useful for pricing models, expected value (EV) analysis, and comparing books.
+
+### What is the house edge in sports odds?
+
+The house edge in sports betting is the percentage by which the sum of implied probabilities on a market exceeds 100%. For a two‑way market with decimal odds O1 and O2, the implied probabilities are 1/O1 and 1/O2. If 1/O1 + 1/O2 = 1.025, the overround (house edge) is 2.5%. For three‑way markets (e.g., football 1X2), you add three implied probabilities. The higher the total, the larger the built‑in edge. Bettors aim to find prices where their estimated true probability exceeds the implied probability after accounting for this margin.
+
+- Overround (percentage) = (Σ implied probabilities − 1) × 100.
+- Fair probability for selection i = implied probability i ÷ Σ implied probabilities.
+- Fair decimal odds for selection i = 1 ÷ fair probability i.
+
+### Formula walkthrough for decimal, fractional, and American odds
+
+To compute margin you must first convert each offered price into an implied probability. Use the format‑specific rules below, then sum the probabilities across all selections to find the overround.
+
+Decimal odds (e.g., 1.95, 2.10, 3.60)
+ 
+- Implied probability p = 1 ÷ decimal_odds.
+- Example: 1.95 implies p = 1 ÷ 1.95 ≈ 0.512820.
+
+Fractional odds (a/b, e.g., 7/5, 5/2)
+ 
+- Convert to implied probability directly: p = b ÷ (a + b).
+- Example: 7/5 implies p = 5 ÷ (7 + 5) = 5 ÷ 12 ≈ 0.416667.
+- Decimal conversion (if needed): decimal = 1 + a/b.
+
+American odds (e.g., +150, −130)
+ 
+- For positive odds +X: p = 100 ÷ (X + 100). Example: +150 ⇒ p = 100 ÷ 250 = 0.400000.
+- For negative odds −X: p = X ÷ (X + 100). Example: −130 ⇒ p = 130 ÷ 230 ≈ 0.565217.
+- Optional decimal conversion: if +X, decimal = 1 + X/100; if −X, decimal = 1 + 100/X.
+
+- Overround (%) = (p1 + p2 + … + pn − 1) × 100.
+- Fair probability (margin removed) for selection i: pfair,i = pi ÷ Σp.
+- Fair decimal odds for selection i: Ofair,i = 1 ÷ pfair,i = Oi × Σp.
+
+### Football 1X2 example: home/draw/away overround in practice
+
+Suppose a Premier League match is priced at Home 2.10, Draw 3.50, Away 3.60 (decimal). Convert each to implied probability, sum them, and compute the overround. Then remove the margin to find fair probabilities and fair odds. All calculations below are exact to six decimals.
+<table><thead><tr><th>Outcome</th><th>Offered Odds (Decimal)</th><th>Implied Probability</th><th>Fair Probability</th><th>Fair Odds (Decimal)</th></tr></thead><tbody><tr><td>Home</td><td>2.10</td><td>0.476190</td><td>0.458015</td><td>2.183333</td></tr><tr><td>Draw</td><td>3.50</td><td>0.285714</td><td>0.274809</td><td>3.638889</td></tr><tr><td>Away</td><td>3.60</td><td>0.277778</td><td>0.267176</td><td>3.742857</td></tr><tr><td><strong>Totals</strong></td><td>—</td><td><strong>1.039682</strong></td><td><strong>1.000000</strong></td><td>—</td></tr></tbody></table>
+
+Overround = (1.039682 − 1) × 100 = 3.968254%. The fair probabilities sum to exactly 1, and the corresponding fair odds are simply the offered odds multiplied by the implied‑probability sum (≈ 1.039682). This workflow lets you compare quoted prices to your own model’s fair prices to judge value objectively.
+
+## How does the Betting Margin Calculator work — and how do I use it?
+
+The calculator converts your odds into implied probabilities, sums them to quantify the overround (also called theoretical hold), and then “de‑vigs” each selection to output fair probabilities and fair odds. It supports 2‑way and 3‑way markets in decimal, fractional, and American formats. Results include: margin factor (Σ implied probabilities), overround percentage, per‑selection fair probability, and fair decimal odds for objective value comparison.
+
+### Step-by-step: input odds to get margin, hold, and fair prices
+
+Follow these steps to compute the market’s theoretical edge and margin‑free prices. “Hold” here refers to the theoretical hold (overround) implied by the quoted odds, not realized book hold from financial reports.
+
+- Select market type: 2‑way (e.g., tennis match winner) or 3‑way (e.g., football 1X2).
+- Choose odds format: decimal, fractional, or American. The calculator converts everything to implied probabilities.
+Enter the offered odds for each selection:
+ 
+- Decimal: p = 1/odds
+- Fractional a/b: p = b/(a + b)
+- American +X: p = 100/(X + 100); American −X: p = X/(X + 100)
+
+View results:
+ 
+- Margin factor (Σp) and Overround (%) = (Σp − 1) × 100
+- Fair probability per selection: pfair,i = pi/Σp
+- Fair odds (decimal): Ofair,i = 1/pfair,i = Oi × Σp
+<table><thead><tr><th>Market</th><th>Selection</th><th>Offered Odds (Decimal)</th><th>Implied Probability</th><th>Σp</th><th>Overround (%)</th><th>Fair Probability</th><th>Fair Odds (Decimal)</th></tr></thead><tbody><tr><td>Two‑way</td><td>A</td><td>1.950000</td><td>0.512821</td><td>1.025641</td><td>2.564103</td><td>0.500000</td><td>2.000000</td></tr><tr><td>Two‑way</td><td>B</td><td>1.950000</td><td>0.512821</td><td>1.025641</td><td>2.564103</td><td>0.500000</td><td>2.000000</td></tr><tr><td>Three‑way</td><td>Home</td><td>2.100000</td><td>0.476190</td><td>1.039683</td><td>3.968254</td><td>0.458015</td><td>2.183333</td></tr><tr><td>Three‑way</td><td>Draw</td><td>3.500000</td><td>0.285714</td><td>1.039683</td><td>3.968254</td><td>0.274809</td><td>3.638889</td></tr><tr><td>Three‑way</td><td>Away</td><td>3.600000</td><td>0.277778</td><td>1.039683</td><td>3.968254</td><td>0.267176</td><td>3.742857</td></tr></tbody></table>
+
+Interpretation: The two‑way example has a 2.564103% overround; de‑vigging yields perfectly symmetric 50/50 fair probabilities and 2.00 fair odds. The football 1X2 example totals 1.039683 (3.968254% overround); multiplying each offered price by 1.039683 returns the corresponding fair odds.
+
+### Accumulator margin: how to estimate combined overround?
+
+For an accumulator (parlay), overround compounds across legs. For each leg’s market, compute Σpj (sum of implied probabilities). The combined margin factor is F = Π Σpj. The parlay’s theoretical hold is then Margin%acca = 100 × (1 − 1/F). Fair parlay odds equal Offered Parlay Odds × F.
+
+- Example (3 legs): Σp1 = 1.047120 (2‑way at 1.91/1.91), Σp2 = 1.039683 (football 1X2 example), Σp3 = 1.052632 (2‑way at 1.90/1.90). Product F ≈ 1.146015.
+- Effective parlay theoretical hold ≈ 100 × (1 − 1/1.146015) = 12.742%.
+- If your selected legs have offered decimals 1.80, 2.10, 2.00, offered parlay = 7.560000. Fair parlay ≈ 7.56 × 1.146015 = 8.663873. The price shortfall reflects the compounded margin.
+
+Notes: The F factor applies regardless of which selections you take within each market. Realized payouts may differ due to stake limits, line moves, or settlement rules, but the theoretical compounding logic holds.
+
+### Is this calculator free and ad‑free?
+
+Yes. The Betting Margin Calculator is free to use, requires no sign‑up, and is ad‑free on this page. It is provided for informational purposes only and does not constitute betting advice. If you are in the UK and need support, visit [BeGambleAware.org](https://www.begambleaware.org). Always bet responsibly and only with funds you can afford to lose.
+
+## Arbitrage and sure bets: can margin reveal opportunities?
+
+Margin (overround) measures a single bookmaker’s built‑in edge on a market, whereas arbitrage (sure betting) exploits price discrepancies across multiple bookmakers so that the sum of the best implied probabilities is below 100%. A margin calculator tells you how “expensive” one market is and returns no‑vig (fair) prices. An arbitrage calculator determines stake splits across different books to lock in a risk‑free return when the cross‑book total implied probability is under 1.
+
+### Arbitrage calculator vs margin calculator: what's the difference?
+
+Both tools use implied probabilities but answer different questions and require different inputs.
+
+Objective:
+ 
+- Margin calculator: quantify a single book’s overround and compute fair (de‑vigged) probabilities/odds for that market.
+- Arbitrage calculator: compute stake allocation across multiple bookmakers to guarantee a profit if Σ(1/oddsbest) &lt; 1.
+
+Inputs:
+ 
+- Margin: all selections from one bookmaker/market.
+- Arb: best price per selection from different bookmakers for the same market and settlement rules.
+
+Key tests:
+ 
+- Margin: overround (%) = (Σ implied probabilities − 1) × 100.
+- Arb: profitability test S = Σ(1/Oi,best); if S &lt; 1, arb exists; profit% = (1/S − 1) × 100.
+
+Outputs:
+ 
+- Margin: fair probabilities pfair,i = pi/Σp; fair decimal odds Ofair,i = 1/pfair,i.
+- Arb: stake split for total stake T: stakei = T × (1/Oi,best) / S; guaranteed payout = T/S regardless of result.
+
+### Can a margin tool replace an arbitrage finder?
+
+No. A margin calculator evaluates one book in isolation and cannot detect cross‑book mispricings by itself. An arbitrage finder (or manual line‑shopping) is required to gather the best prices for each outcome across multiple bookmakers and to check whether the cross‑book sum of implied probabilities drops below 1. Even then, practical constraints apply.
+
+- Data and speed: arbs are time‑sensitive; you need fast, multi‑book odds collection and refresh to beat price moves.
+- Consistency: settlement rules must match (e.g., football 1X2 regulation vs. including extra time; tennis retirements; Asian handicaps push rules).
+- Execution frictions: stake limits, account restrictions, delays, odds changes, rounding, and fees can erase small theoretical edges.
+- Correlation: accumulator or related markets may violate independence assumptions and invalidate sure‑bet logic.
+- Risk controls: always confirm that all legs can be placed and settled as expected before committing capital.
+
+### 3-way sure bets: using home/draw/away prices
+
+To check a football 1X2 sure bet, collect the best decimal odds across books for Home, Draw, and Away. Compute S = 1/OH + 1/OD + 1/OA. If S &lt; 1, you can lock in profit by splitting stakes in proportion to 1/O across outcomes. The guaranteed payout equals T/S, where T is your total stake.
+<table><thead><tr><th>Outcome</th><th>Best Odds (Decimal)</th><th>Implied Probability (1/O)</th><th>Stake Allocation (£, T = 1000)</th><th>Guaranteed Payout (£)</th></tr></thead><tbody><tr><td>Home</td><td>2.50</td><td>0.400000</td><td>444.444</td><td>1111.110</td></tr><tr><td>Draw</td><td>4.00</td><td>0.250000</td><td>277.778</td><td>1111.112</td></tr><tr><td>Away</td><td>4.00</td><td>0.250000</td><td>277.778</td><td>1111.112</td></tr><tr><td><strong>Totals / Result</strong></td><td>—</td><td><strong>S = 0.900000</strong></td><td><strong>1000.000</strong></td><td><strong>T/S ≈ 1111.111</strong></td></tr></tbody></table>
+
+Interpretation: Since S = 0.90 &lt; 1, this is a sure bet. Profit% = (1/S − 1) × 100 = 11.111%. With T = £1000, the guaranteed return is about £1111.11, so profit ≈ £111.11 before any fees or rounding effects. Always verify identical market scope (e.g., “90 minutes only” vs “incl. extra time”) and confirm bet acceptance at quoted prices before staking.
+
+## How did odds margins evolve to today's markets?
+
+Odds margins (overrounds) began as a manual buffer that on‑course bookmakers added to prices to manage risk and secure income. With the rise of online sportsbooks, data feeds, and algorithmic market‑making, margins on high‑liquidity events compressed, while niche and in‑play markets often retained higher buffers to reflect uncertainty and operational risk. Betting exchanges introduced a commission‑based model that separated pricing from the operator’s embedded edge, accelerating price discovery and sharpening closing odds on popular events.
+
+### Profit margin vs hold vs vigorish: are they the same?
+
+These terms are related but not identical; context matters. In pricing analysis, “overround,” “vigorish,” and “juice” usually refer to the same theoretical concept: the amount by which the sum of implied probabilities exceeds 100% on a market. “Hold,” however, can mean the realized performance of a book after settlement.
+
+Theoretical overround (also called vigorish/juice in this context):
+ 
+- Definition: Σ(implied probabilities) − 1, expressed as a percentage.
+- Formula: Overround% = 100 × (Σ pi − 1), where pi = 1/Oi (decimal odds).
+
+Realized hold (operator reporting metric):
+ 
+- Definition: Proportion of handle retained after paying winning bets over a period.
+- Formula: Hold% = 100 × (Handle − Payouts) ÷ Handle.
+- Notes: Fluctuates with results and mix of markets; distinct from the theoretical overround on any single market.
+
+“Profit margin” (business accounting context):
+ 
+- Could refer to realized hold, or to net profit after operating costs divided by revenue; usage varies by report.
+
+### From early overrounds to exchanges and sharper pricing
+
+Market structure, technology, and liquidity have steadily pushed headline margins down on major events while improving the accuracy of closing prices.
+
+- Pre‑internet era: On‑course and high‑street bookmakers posted fractional odds with discretionary overrounds. Price discovery was local and slower, so buffers were wider and varied by layer and venue.
+- Late 1990s: Wider adoption of decimal odds in Europe simplified probability comparisons. Asian handicap markets gained global traction, enabling tighter pricing on two‑way lines (with push rules).
+- 2000s: Betting exchanges (e.g., launched in 2000) introduced order‑book trading and commission on net winnings instead of embedded margin. Liquidity concentrated on top leagues and events, speeding convergence toward efficient closing prices.
+- 2010s–today: API feeds, quantitative market‑making, and syndicate activity increased the velocity of line moves. “Sharp” low‑margin operators embraced a high‑volume, low‑spread model and allowed winners, making their closing prices a common benchmark for price efficiency.
+
+### What do Pinnacle margins say about market efficiency?
+
+Low embedded margins on popular leagues (e.g., top‑flight football, major tennis tours) indicate intense competition for prices and faster information incorporation. In practice, many bettors treat sharp, low‑margin closes as a proxy for market efficiency: consistently beating those closing lines (achieving positive closing‑line value, or CLV) is a stronger signal of predictive edge than short‑term win rates. Conversely, higher overrounds in low‑liquidity or complex props reflect greater model uncertainty, operational costs, and the need to protect against informational asymmetry.
+
+The table below illustrates how lower overround narrows spreads without changing the underlying “fair” probabilities. Both books price the same notional 1X2 event with identical fair probabilities; only the embedded margin differs. All numbers are mathematically exact to six decimals based on the stated inputs.
+<table><thead><tr><th>Outcome</th><th>Fair Probability</th><th>Fair Odds (Decimal)</th><th>Book A Odds (Σp=1.020)</th><th>Book A Implied p</th><th>Book B Odds (Σp=1.060)</th><th>Book B Implied p</th></tr></thead><tbody><tr><td>Home</td><td>0.450000</td><td>2.222222</td><td>2.177295</td><td>0.459000</td><td>2.096436</td><td>0.477000</td></tr><tr><td>Draw</td><td>0.280000</td><td>3.571429</td><td>3.502804</td><td>0.285600</td><td>3.368005</td><td>0.296800</td></tr><tr><td>Away</td><td>0.270000</td><td>3.703704</td><td>3.629764</td><td>0.275400</td><td>3.494232</td><td>0.286200</td></tr><tr><td><strong>Totals</strong></td><td><strong>1.000000</strong></td><td>—</td><td>—</td><td><strong>1.020000</strong></td><td>—</td><td><strong>1.060000</strong></td></tr></tbody></table>
+
+Takeaways:
+ 
+- Lower Σp (e.g., 1.02) implies a smaller theoretical edge for the bookmaker and tighter prices around the same fair baseline.
+- Where sharp books display low, stable Σp and high liquidity, closing prices tend to incorporate new information quickly, a hallmark of more efficient markets.
+- Efficiency is not perfection: edges may persist in low‑liquidity segments, rapidly changing in‑play states, or where models disagree on priors.
+
+## The other side: what's the strongest case against using calculators?
+
+Calculators translate odds into implied probabilities, margin, and fair prices—useful for analysis—but they do not create an edge by themselves. Beating mature markets requires superior forecasts, fast execution, disciplined bankroll management, and an understanding of operational frictions. Without those, raw outputs can be misread, and small theoretical edges can vanish once fees, line moves, or rule mismatches are considered.
+
+### Is raw margin enough to beat the book?
+
+No. A low overround indicates cheaper pricing, not a profitable bet. To achieve positive expected value (EV), your estimate of a selection’s true probability must exceed the implied probability of the price you can actually secure at bet placement time. Two practical tests matter far more than raw margin: your model’s calibration and whether you consistently beat the closing line (positive closing-line value, or CLV). Even with a small overround, a miscalibrated model or poor timing yields negative EV.
+
+- Margin is market-level; EV is selection-level. You can lose money in a 102% market if you select the wrong side, and make money in a 106% market if you find a misprice.
+- CLV signal: Buying 2.08 that closes 2.00 suggests your estimate added information. Over time, positive CLV correlates with positive EV more robustly than short-term win rate.
+- Sample size and variance: Short streaks are noisy; evaluate long-run results and distribution of edges, not isolated outcomes.
+- Rule alignment: Settlement and void rules (e.g., “90 minutes only” vs “incl. extra time,” tennis retirement rules) can flip an apparent edge once harmonised.
+
+### When the "best" calculator won't help: moves, fees, errors
+
+Execution frictions can erode or eliminate slim theoretical edges. Below is an illustrative, fully worked example showing how a 9.2% EV opportunity can shrink after commission and a price move. Assumptions are explicit and the maths is exact.
+<table><thead><tr><th>Step</th><th>Quoted Odds (Decimal)</th><th>Assumed True Probability</th><th>Assumed Commission on Winnings</th><th>Net Odds After Fees</th><th>EV% = p × NetOdds − 1</th></tr></thead><tbody><tr><td>1) Initial quote</td><td>2.100000</td><td>0.520000</td><td>0.00%</td><td>2.100000</td><td>9.200000%</td></tr><tr><td>2) Apply commission</td><td>2.100000</td><td>0.520000</td><td>2.00%</td><td>2.078000</td><td>8.056000%</td></tr><tr><td>3) Line moves before placement</td><td>2.040000</td><td>0.520000</td><td>2.00%</td><td>2.019200</td><td>4.998400%</td></tr><tr><td>4) Conservative fallback price</td><td>2.000000</td><td>0.520000</td><td>2.00%</td><td>1.980000</td><td>2.960000%</td></tr></tbody></table>
+
+Other common frictions and risks:
+
+- Delays and partial fills: Live betting or exchange orders can be repriced or partially matched at worse levels.
+- Stake caps and rounding: Min/max stake rules and tick sizes can reduce effective position sizing and EV realisation.
+- Mismatch errors: Different market scopes across books (e.g., regulation time vs. extra time) can void a supposed arb.
+- Operational policies: Palpable error and void clauses may unwind bets placed at clearly wrong lines.
+- Costs beyond commission: Currency conversion spreads, payment fees, and latency costs can matter at small edges.
+
+### Responsible betting in the UK: stay in control
+
+Use calculators for learning and pricing discipline, not as a signal to chase losses. In the UK, support and practical tools are readily available if betting stops being fun or controlled. Consider setting deposit limits, time-outs, and self-exclusion if needed, and seek confidential help any time.
+
+- Information and support: [BeGambleAware.org](https://www.begambleaware.org)
+- 24/7 confidential help: [0808 8020 133](tel:08088020133) (National Gambling Helpline, operated by GamCare) and live chat via [GamCare](https://www.gamcare.org.uk)
+- NHS services: Guidance and referrals via the [NHS gambling support](https://www.nhs.uk/live-well/addiction-support/gambling-addiction/)
+- Practical controls: Deposit limits, reality checks, cool-offs, and self-exclusion (GAMSTOP) for UK-licensed operators.
+
+If you are concerned about your betting, reaching out early is a strength. Professional support is free and confidential in the UK.
+
+## Frequently Asked Questions
+
+### How do I convert overround to payout percentage?
+
+Payout% equals 100 divided by the sum of implied probabilities (Σp), which is also 100 × 1 ÷ (1 + Overround%/100). If Σp = 1.039682, the market pays out 100/1.039682 = 96.18% of turnover and the overround is 3.968%. For a common two‑way −110/−110 line, Σp = 1/1.9091 + 1/1.9091 = 1.04762, so payout% = 100/1.04762 = 95.45% and overround = 4.762%.
+
+### What are typical bookmaker margins by sport and market in the UK?
+
+Top‑tier two‑way sides and totals often carry 1.5–3.5% overround pre‑match, football 1X2 in major leagues tends to sit around 3.0–5.0%, tennis match winner typically runs at 2.0–4.5%, basketball and American‑football sides at 2.0–4.5%, while lower leagues, niche sports, and player props frequently show 5–12% pre‑match and 6–15% in‑play. As a payout reference, a 3% overround implies about 97.09% payout (100/1.03), while a 10% overround implies about 90.91% payout (100/1.10).
+
+### How do I calculate margin from American odds like −110/−110?
+
+Convert −110 to implied probability 110/(110+100) = 0.52381 per side and add them to get Σp = 1.04762, so the overround is 4.762%. The same method shows −107/−107 yields Σp = 1.04038 and a 4.038% overround, while −105/−105 yields Σp = 1.03559 and a 3.559% overround.
+
+### How precise should my inputs be and how much error does rounding add?
+
+Use the quoted odds exactly; rounding odds to two decimals typically shifts Σp by less than 0.02 percentage points in common ranges. For the 1X2 set 2.10, 3.50, 3.60, exact Σp is 1.039682 (3.968%); even if you rounded an input like 3.500 to 3.50, the change in Σp is 0.000000 and the displayed overround is unchanged to three decimals. For tighter two‑way prices (for example 1.952 vs 1.950), rounding the 1.952 down to 1.95 moves Σp by about 0.00053, shifting the overround by 0.053%.
+
+### How do I remove vig if the margin isn’t spread evenly across outcomes?
+
+Simple de‑vig scales each probability by dividing by Σp, which assumes a uniform margin; if the book weights the edge toward the favourite or underdog, use a power method that raises quoted probabilities to an exponent α before normalising. For a two‑way example with quoted probabilities 0.560 and 0.500 (Σp = 1.060), proportional de‑vig gives 0.5283 and 0.4717, while a modest skew using α = 0.95 shifts them to 0.5310 and 0.4690; this 0.27 percentage‑point move can change fair odds by roughly 0.01–0.02 in decimal.
+
+### How do I compute margin on a betting exchange with commission?
+
+Convert each back price to net odds after commission on winnings, then sum implied probabilities from those net odds. With 2% commission, a back price of 2.02 becomes net 1 + (2.02−1)×0.98 = 1.9996; in a two‑way with both selections at 2.02 back, Σp ≈ 1/1.9996 + 1/1.9996 = 1.0002, so the effective overround is about 0.02%. At 5% commission with both at 2.02, net odds are 1 + 1.02×0.95 = 1.969, Σp ≈ 1.0158, and the implied overround is about 1.58%.
+
+### Do UK taxes affect margin calculations or my payouts?
+
+No customer tax applies to UK bettors; stakes and winnings are paid at 0% tax for the customer, so the calculator’s inputs and outputs are unaffected. Operator duties are embedded in how firms set odds, but you do not add or subtract any tax when computing Σp, overround, or fair odds.
+
+### Why would Σ implied probabilities be below 100% and what does it mean?
+
+Σp below 1 indicates an underround, which is a bettor’s edge created by enhanced odds, an exchange after commission, or a misprice. For example, 2.05/2.05 on a two‑way gives Σp = 2 × (1/2.05) = 0.97561, so the theoretical profit is about (1/0.97561−1)×100 = 2.49% before limits, delays, or rule checks.
+
+### How should I estimate accumulator (parlay) margin when legs are correlated?
+
+You cannot multiply Σp factors when legs are correlated; the true combined margin factor lies between the maximum single‑leg factor and the product of all factors. If F1 = 1.030 and F2 = 1.040 on the same match (for example team to win and over 2.5), the combined factor F is bounded by 1.040 ≤ F ≤ 1.0712; using the product would overstate the margin if the bets are positively correlated.
+
+### Can I use the calculator for Asian handicap 0 (draw‑no‑bet) or markets with a push?
+
+Yes, sum the two implied probabilities as usual to get the conditional overround on non‑push outcomes, then adjust for push probability if you need an effective hold on turnover. If O1 = O2 = 1.93, Σp = 2 × 1/1.93 = 1.03627 for a 3.627% conditional overround; with an 8% push probability, the effective hold on total stakes is roughly 0.92 × 3.627% = 3.34% because pushes return the stake and carry zero edge.
+
+### How do I compute expected value (EV) with my own probabilities and the calculator’s outputs?
+
+Use EV% = p_model × O_offered − 1 after adjusting O_offered for any fees or commission. If your model puts Home at 48% and the offered decimal is 2.10, EV% = 0.48 × 2.10 − 1 = 0.8%; if exchange commission is 2%, net odds are 2.10 − 0.02 × (2.10 − 1) = 2.078, giving EV% = 0.48 × 2.078 − 1 = −0.1%, which flips the edge negative.
+
+### Can I calculate margin for each‑way horse racing markets?
+
+Treat win and place parts as separate books, compute each overround, then average them per £1 each‑way stake. For example, with win‑book Σp = 1.200 (20% overround) and a place‑book built from the each‑way terms showing Σp = 1.250 (25% overround), the effective theoretical cost per £1 EW is about 0.5×20% + 0.5×25% = 22.5%; if the place terms are 1/5 for 3 places at 5/1, the place odds component is 1 + (5×1/5) = 2.00 before you measure the place‑book Σp across all runners.
+
+### How can I convert fair decimal odds back to fractional and American formats?
+
+For decimal D ≥ 2, American = +100 × (D − 1); for D 
+
+### What input limits should I use to avoid invalid margin results?
+
+Decimal odds must exceed 1.00, fractional denominators must be positive, and American odds cannot sit between −100 and +100; practical safe ranges are decimal 1.01–1000, fractional 1/1000 up to large prices like 1000/1, and American from about −100000 to +100000. Inputs outside these bounds create implied probabilities of 0 or greater than 1 for a single outcome, which breaks Σp and fair‑odds calculations.
+
+### Do pushes, voids, or Rule 4 deductions change fair‑odds outputs?
+
+Yes, because Σp assumes mutually exclusive and exhaustive outcomes that settle at quoted terms; any chance of void, push, or deduction alters payouts and the effective edge. If 10% of results are voided on average, a nominal 4.0% overround on resolved outcomes yields about 3.6% effective hold on turnover, while Rule 4 place deductions in horse racing reduce returns after the bet is placed and therefore make the ex‑ante fair odds from undeducted prices too optimistic.
+
+### How do I measure closing‑line value (CLV) precisely?
+
+For back bets, CLV% = (O_bet ÷ O_close − 1) × 100; values above 0 mean you beat the close. If you back at 2.08 and the market closes 2.00, CLV% = (2.08/2.00 − 1) × 100 = 4.00%; in probability terms, your entry implied 1/2.08 = 48.08% while the close implies 1/2.00 = 50.00%, a 1.92 percentage‑point move against the price you secured.

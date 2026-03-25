@@ -1,0 +1,290 @@
+**Title:** Trixie Bet Calculator Free Work Out Returns Official 2026
+
+ **Description:** Free Trixie bet calculator for UK punters. Enter odds, stake, each way, Rule 4 and dead heat. Instant doubles and treble returns. Football and Irish Lotto ready.
+
+# Trixie Bet Calculator
+
+Work out Trixie returns in seconds — free, fast, and built for UK markets. Enter fractional, decimal, or American odds, add each way, Rule 4, or dead heat, and see doubles, treble, and total profit instantly. Optimised for football and Irish Lotto Trixies, no sign‑up required.
+
+## What is a Trixie bet and how does this calculator work?
+
+A Trixie is a full-coverage multiple built from three selections and contains four equal-stake bets: three doubles and one treble. There are no singles. In a win-only Trixie, you need at least two winning selections to receive a return. The calculator splits your total stake equally across the four component bets (or uses a per-bet unit stake), converts odds from the format you enter, and then multiplies them across each double and the treble to show total return and profit. Optional settlement settings such as each way, dead heat, and Rule 4 deductions can be applied to mirror UK settlement practices.
+
+### How is a Trixie structured: 3 doubles + 1 treble
+
+A Trixie uses three selections (A, B, C) to generate four bets. Each component bet must win in full for a return on that component. If you enter a total stake, the calculator divides it equally across all four bets; if you enter a unit stake, that amount is staked on each component bet.
+
+- Selections: three picks (A, B, C)
+- Component bets: 3 doubles (AB, AC, BC) and 1 treble (ABC)
+- Stake allocation: total stake ÷ 4 per bet, or fixed unit stake per bet
+- Minimum winners (win-only): 2 winners (to land at least one double)
+<table><thead><tr><th>Component</th><th>Combinations</th><th>Number of Bets</th><th>Minimum Winners Needed</th><th>Stake Allocation Logic</th></tr></thead><tbody><tr><td>Doubles</td><td>AB, AC, BC</td><td>3</td><td>2</td><td>Unit stake s per bet, or total T ⇒ T/4 on each bet</td></tr><tr><td>Treble</td><td>ABC</td><td>1</td><td>3</td><td>Unit stake s per bet, or total T ⇒ T/4 on the treble</td></tr></tbody></table>
+
+### Can we walk through a Trixie bet example?
+
+Example (win-only). Three selections with fractional odds and decimal equivalents: A at 2/1 (3.00), B at 5/4 (2.25), C at 4/5 (1.80). Use a unit stake of £2 per bet (total stake £8 across 4 bets). Returns are calculated in decimal as stake × product of odds for the legs in that component.
+<table><thead><tr><th>Component Bet</th><th>Odds (Decimal)</th><th>Stake</th><th>Return if A, B, C all win</th><th>Return if C loses (only A and B win)</th></tr></thead><tbody><tr><td>Double AB</td><td>3.00 × 2.25</td><td>£2</td><td>£2 × 3.00 × 2.25 = £13.50</td><td>£13.50</td></tr><tr><td>Double AC</td><td>3.00 × 1.80</td><td>£2</td><td>£2 × 3.00 × 1.80 = £10.80</td><td>£0.00 (loses)</td></tr><tr><td>Double BC</td><td>2.25 × 1.80</td><td>£2</td><td>£2 × 2.25 × 1.80 = £8.10</td><td>£0.00 (loses)</td></tr><tr><td>Treble ABC</td><td>3.00 × 2.25 × 1.80</td><td>£2</td><td>£2 × 3.00 × 2.25 × 1.80 = £24.30</td><td>£0.00 (loses)</td></tr><tr><td><strong>Totals</strong></td><td>—</td><td><strong>£8.00</strong></td><td><strong>£56.70 return, £48.70 profit</strong></td><td><strong>£13.50 return, £5.50 profit</strong></td></tr></tbody></table>
+
+- When all three win, each component pays; total return is the sum of all four components.
+- If only two win, exactly one double pays; the other two doubles and the treble lose.
+- If fewer than two win (win-only), no return is generated in a Trixie.
+
+Each way Trixies place a win and a place Trixie simultaneously (doubling the number of bets from 4 to 8). Place returns use the bookmaker’s place terms and the place part of the odds; the calculator applies these automatically when each way is toggled on.
+
+### What inputs and formats are supported (fractional, decimal, American)?
+
+The calculator accepts fractional, decimal, and American odds, and converts them consistently for calculation. You can enter either a total stake (auto-split into four equal parts) or a unit stake per bet. Optional inputs include each way, Rule 4 deductions, dead heat fractions, void legs, and custom place terms for racing.
+
+- Fractional (UK): enter as a/b (e.g., 5/2). Decimal conversion: 1 + a/b.
+- Decimal (EU): enter as d (e.g., 3.50). American conversion: if d ≥ 2.0 ⇒ +100 × (d − 1); if 1.01–1.99 ⇒ −100 ÷ (d − 1).
+- American (US): enter as +x or −x. Decimal conversion: +x ⇒ 1 + x/100; −x ⇒ 1 + 100/|x|.
+<table><thead><tr><th>Format</th><th>Example</th><th>Decimal Equivalent</th><th>American Equivalent</th></tr></thead><tbody><tr><td>Fractional</td><td>2/1</td><td>3.00</td><td>+200</td></tr><tr><td>Fractional</td><td>5/4</td><td>2.25</td><td>+125</td></tr><tr><td>Fractional</td><td>4/5</td><td>1.80</td><td>-125</td></tr><tr><td>Decimal</td><td>1.50</td><td>1.50</td><td>-200</td></tr><tr><td>American</td><td>+150</td><td>2.50</td><td>+150</td></tr><tr><td>American</td><td>-110</td><td>1.9091</td><td>-110</td></tr></tbody></table>
+
+- Rounding: returns are typically displayed to 2 decimal places in GBP for UK users.
+- Settlement options: dead heats apply fractional reductions; Rule 4 deductions reduce affected legs as per the deduction band.
+- Validation: the tool checks for zero/negative odds, incompatible formats, and splits total stake accurately across the four bets.
+
+## How do you place a Trixie bet and read your returns?
+
+Placing a Trixie in practice means entering three selections, choosing how you want to stake (a single unit stake per component bet or a total stake split across them), and deciding whether to make it each way. Reading the returns is then about understanding that your Trixie comprises three doubles and one treble: if all three selections win, all four components settle and pay; if exactly two win, one double pays; if fewer than two win in a win-only Trixie, there is no return. The calculator shows per-component returns and the combined total return and profit, applying settlement adjustments such as dead heats, Rule 4, and voids where relevant.
+
+### Stake options: total vs per bet, each way explained
+
+You can fund a Trixie using either a unit stake per component bet or a single total stake that is divided equally across all component bets. A win-only Trixie has 4 bets; an each-way Trixie doubles that to 8 bets (a win and a place part for each component). Each way is most relevant to events with each-way place terms (e.g., horse racing, golf outrights); it is typically not used for regular football match markets.
+<table><thead><tr><th>Stake Mode</th><th>Trixie Type</th><th>Number of Bets</th><th>Stake Per Bet</th><th>Total Outlay (Example)</th><th>How It’s Applied</th></tr></thead><tbody><tr><td>Unit stake</td><td>Win-only</td><td>4</td><td>s (e.g., £2)</td><td>4 × s (e.g., £8)</td><td>Same unit stake goes on each double and the treble.</td></tr><tr><td>Unit stake</td><td>Each way</td><td>8</td><td>s on win + s on place (e.g., £2 + £2)</td><td>8 × s (e.g., £16)</td><td>Each component has a win part and a place part at the defined place terms.</td></tr><tr><td>Total stake</td><td>Win-only</td><td>4</td><td>T ÷ 4 (e.g., £20 ÷ 4 = £5)</td><td>T (e.g., £20)</td><td>Total stake is split equally across the 3 doubles and 1 treble.</td></tr><tr><td>Total stake</td><td>Each way</td><td>8</td><td>T ÷ 8 (e.g., £20 ÷ 8 = £2.50)</td><td>T (e.g., £20)</td><td>Total stake is split equally across the win and place parts of all components.</td></tr></tbody></table>
+
+Key points when reading returns: the “win” and “place” parts of an each-way Trixie settle independently; place returns use the bookmaker’s stated place terms and the place fraction of the odds. Profit equals total return minus total outlay. For UK users, returns are typically displayed in GBP to two decimal places.
+
+- Win-only Trixie: minimum of two winners required for any return.
+- Each-way Trixie: the place part can return even if the win part loses, subject to place terms.
+- Total stake mode simplifies budgeting; unit stake mode gives fine control over staking per component.
+
+### Settlement rules: dead heats, Rule 4, voids
+
+UK settlement conventions affect how component bets in your Trixie are calculated. The calculator mirrors these rules per selection and propagates them to affected doubles and the treble.
+
+- Dead heats: when selections tie for a paying position and cannot be split, the affected part of the bet is settled at full odds on a reduced stake. For example, in a two-way dead heat for first on a win market, half the stake is settled at the full odds (the other half is lost). For each-way bets, apply dead-heat reductions separately to the win part (if tied for the win) and/or the place part (if tied for a place).
+- Rule 4 deductions (horse/greyhound racing): if a runner is withdrawn after bets are placed and before the off, a deduction in pence per pound may apply to winning returns (stake is not reduced). The deduction band depends on the withdrawn runner’s price at the time of withdrawal (e.g., a strong favourite such as 4/6 typically produces a higher deduction than a 6/1 chance). The calculator lets you enter the Rule 4 figure (e.g., 55p in the pound) per affected selection, and applies it to the returns of any component bet including that selection.
+Voids: a void selection is treated as having odds of 1.00. In a Trixie:
+ 
+- A double containing a voided selection becomes a single on the remaining selection.
+- The treble becomes a double on the two remaining selections.
+- If two selections are void, the treble becomes a single on the remaining live selection; any doubles with two voids are void.
+
+- Order of operations: apply voids first (structural change), then dead heat adjustments and Rule 4 deductions to any impacted live selections.
+- Non-runner with no Rule 4 (e.g., after the off or in sports outside racing) typically settles as void.
+- The calculator shows per-component outcomes so you can verify how each rule changed the return.
+
+### Football and Irish Lotto Trixie: any differences?
+
+The Trixie structure is identical across sports and specials, but market conventions differ. Football Trixies commonly use win-only markets (e.g., Match Result, Over/Under, Both Teams To Score). Each way is unusual for regular match markets but can apply to outrights (e.g., league winner each way) with specified place terms. Irish Lotto Trixies, where permitted, use fixed-odds number betting; there are typically no each-way or Rule 4 adjustments on lotto markets, and dead heat concepts do not apply in number draws. Bookmaker rules may restrict lotto multiples, especially within the same draw; many require selections to be from different draws or markets—always check the specific operator’s rules.
+
+Football:
+ 
+- Commonly win-only Trixies on match or totals markets.
+- No Rule 4; dead heats rare except in player or outright markets.
+- Each way mainly for outrights or top-scorer style markets (if offered).
+
+Irish Lotto:
+ 
+- Fixed-odds number betting; no each-way, no Rule 4, dead heats not applicable.
+- Voids can occur if a draw is cancelled/postponed; affected legs settle as void.
+- Multiples may be restricted within the same draw; cross-draw Trixies may be required by some bookmakers.
+
+Calculator inputs:
+ 
+- Football: enter odds in fractional/decimal/American; usually win-only.
+- Irish Lotto: use the bookmaker’s fixed odds (often large fractional prices) and set each selection’s market/draw to comply with rules.
+
+## Advanced calculator settings for real‑world betting
+
+Real‑world settlements rarely follow a tidy textbook pattern. Prices move, runners come out, ties occur, and bookmakers sometimes offer cash‑out on live bets. This section explains how an advanced Trixie calculator treats edge cases you will meet in practice, how to interpret the coverage of doubles and the treble, and how to measure overall performance (ROI). It also outlines practical ways to run the tool like an app on your mobile.
+
+### Does the app handle cash‑out and partial wins?
+
+Cash‑out is a proprietary price offered by a bookmaker on the whole bet at a given moment; it depends on internal models and margins and cannot be predicted exactly by third‑party calculators. As a result, an advanced Trixie calculator will not “simulate” or fetch live cash‑out automatically. Instead, you can record or approximate outcomes in a transparent way.
+
+What the calculator can do:
+ 
+- Settle standard outcomes precisely (win, lose, void) and apply dead‑heat fractions and Rule 4 deductions per affected selection.
+- Record a taken cash‑out as a final total return for audit purposes (if a “custom total return” field is provided), bypassing further component settlement.
+- Approximate “partial success” on a selection by using dead‑heat fractions when applicable (e.g., ties for places) — this is the only regulated form of a “partial win.”
+
+What the calculator cannot do:
+ 
+- Reconstruct or guarantee a bookmaker’s live cash‑out offer, since algorithms and margins vary by operator and time.
+- Apply a single “effective” price to one leg that exactly replicates a whole‑bet cash‑out across all Trixie components — there is no unique solution because each selection appears in multiple components with different exposures.
+
+- If you accept a bookmaker cash‑out, treat the bet as closed. Record the actual payout as the final return; do not also settle legs later, to avoid double counting.
+- Use dead‑heat inputs only when a legitimate tie exists and settlement rules specify a stake split at full odds.
+- If a selection is voided (e.g., non‑runner), mark it void; the calculator will automatically transform affected doubles/treble as per standard rules (see settlement rules).
+
+### Accumulator coverage: doubles, treble, and overall ROI
+
+A Trixie creates three doubles and one treble from three selections. Your exposure and return come from the sum of those four components. For win‑only Trixies with unit stake s, total outlay is 4s; for each‑way, outlay is 8s (win and place parts). Measure performance with profit (total return − total stake) and ROI = profit ÷ total stake × 100%.
+<table><thead><tr><th>Scenario</th><th>Selections (Decimal)</th><th>Live Components</th><th>Component Returns (£, unit stake £1)</th><th>Total Stake</th><th>Total Return</th><th>Profit</th><th>ROI</th></tr></thead><tbody><tr><td>All three win</td><td>A 2.50, B 1.80, C 3.20</td><td>AB, AC, BC, ABC</td><td>AB 4.50; AC 8.00; BC 5.76; ABC 14.40</td><td>£4.00</td><td>£32.66</td><td>£28.66</td><td>716.50%</td></tr><tr><td>Exactly two win (A, B win; C loses)</td><td>A 2.50, B 1.80, C 3.20</td><td>AB</td><td>AB 4.50</td><td>£4.00</td><td>£4.50</td><td>£0.50</td><td>12.50%</td></tr><tr><td>One or zero win</td><td>Any</td><td>—</td><td>—</td><td>£4.00</td><td>£0.00</td><td>−£4.00</td><td>−100.00%</td></tr></tbody></table>
+
+The table assumes win‑only with £1 unit stakes per component (total £4). For each‑way Trixies, compute win and place parts separately using the place terms, then sum both totals before calculating ROI.
+
+- Coverage: a Trixie pays with two winners (at least one double) and maximises upside when all three win (all four components pay).
+- Sensitivity: ROI is highly sensitive to one short‑priced selection losing because it knocks out two doubles and the treble at once.
+- Discipline: compare expected value (EV) selection‑by‑selection; the product structure magnifies both edge and overround.
+
+### Is there a Trixie bet calculator app?
+
+Most modern Trixie calculators are web‑based and mobile‑friendly. You can run them like an app by adding them to your home screen. This creates an app‑style launcher, quick access, and (for progressive web apps) local caching of assets. Functionality is the same as the website: you can enter odds in fractional/decimal/American, toggle each way, and apply dead‑heat, Rule 4, and void settings.
+
+iOS (Safari):
+ 
+- Open the calculator page.
+- Tap Share, then Add to Home Screen.
+- Confirm the name and Add.
+
+Android (Chrome):
+ 
+- Open the calculator page.
+- Tap the menu (⋮), choose Add to Home screen (or Install app if offered).
+- Confirm Install.
+
+Desktop (Chrome/Edge):
+ 
+- Open the calculator page.
+- Click the Install icon in the address bar (if available), or use More tools → Create shortcut (Open as window).
+
+Tip: Always verify settlement settings (dead heat, Rule 4, voids) match your market before saving presets. Web apps cannot access your bookmaker account, so they do not place bets or fetch live cash‑out quotes; they are calculation tools only.
+
+## Trixie vs Patent and other multiples: which should you choose?
+
+Choosing between a Trixie and its neighbours (Patent, plain doubles/trebles, or large perms like a Heinz) is a trade‑off between coverage, cost, variance, and your edge on each selection. A Trixie focuses your stake on three doubles and one treble (no singles), while a Patent adds singles for more coverage at a higher outlay. Larger perms scale exposure quickly and require robust selection quality and bankroll discipline.
+
+### Patent vs Trixie: which is better for your strategy?
+
+A Trixie is 4 bets (3 doubles + 1 treble) from 3 selections, requiring at least two winners for any return. A Patent is 7 bets (3 singles + 3 doubles + 1 treble), so it can return with just one winner, but the extra coverage costs more stake. The better choice depends on your strike rate, average odds, and tolerance for variance.
+<table><thead><tr><th>Bet Type</th><th>Bets</th><th>Components</th><th>Minimum Winners for Any Return</th><th>Outlay at £1 Unit Stake</th><th>Return if only A wins (A=3.00)</th><th>Return if A &amp; B win (A=3.00, B=2.25)</th><th>Return if A, B, C win (A=3.00, B=2.25, C=1.80)</th></tr></thead><tbody><tr><td>Trixie</td><td>4</td><td>AB, AC, BC; ABC</td><td>2</td><td>£4</td><td>£0.00</td><td>£6.75 (AB)</td><td>£28.35 (AB+AC+BC+ABC)</td></tr><tr><td>Patent</td><td>7</td><td>A, B, C; AB, AC, BC; ABC</td><td>1</td><td>£7</td><td>£3.00 (A)</td><td>£12.00 (A + B + AB)</td><td>£35.40 (A+B+C+AB+AC+BC+ABC)</td></tr></tbody></table>
+
+Interpretation with £1 unit stakes: A single winner at 3.00 returns £3.00 on a Patent but still loses overall (profit −£4.00) because the outlay is £7; a Trixie would return £0.00 in the same case. With two winners at 3.00 and 2.25, the Trixie returns £6.75 (profit +£2.75 vs £4 outlay), while the Patent returns £12.00 (profit +£5.00 vs £7 outlay). Break‑even guides: Trixie with exactly two winners breaks even when d1 × d2 ≥ 4.00 (for £1 unit stakes); Patent with exactly one winner breaks even only if the winning single’s decimal odds ≥ 7.00. If you often hit two winners at modest odds, Trixie concentrates stake efficiently; if you hit lone winners regularly or value reduced variance, Patent’s singles can justify the extra cost.
+
+### Double and Treble calculators: when are they better?
+
+Sometimes you do not want full Trixie coverage. A Double calculator is ideal when you only want exposure to one specific pair (e.g., AB) without staking on AC or BC. A Treble calculator fits a high‑conviction three‑leg view where you accept all‑or‑nothing risk for a higher potential return. These tools also help sanity‑check settlement on a subset of legs (e.g., a single related double) without the extra permutations a Trixie carries.
+
+Use a Double when:
+ 
+- You have two strong, independent selections and want to avoid extra pairs.
+- Your edge is concentrated in the two picks, and adding a third would dilute EV.
+- You need tighter risk control than a Trixie’s three doubles provide.
+
+Use a Treble when:
+ 
+- You have three strong selections and prefer maximum payout over partial coverage.
+- You explicitly accept higher variance and the possibility of returning £0 unless all three win.
+- You want a clean benchmark for the three‑leg product price (to compare against a Trixie’s blended outcome).
+
+Notes:
+ 
+- A Trixie’s “coverage premium” is the extra stake spread over three doubles; a single Double avoids paying for unwanted combinations.
+- Related contingencies are typically not allowed in multiples; ensure legs are independent under bookmaker rules.
+
+Example check: With A=2.20 and B=2.00, a £1 Double returns £4.40 if both win; a Trixie including C adds two more doubles and a treble — useful only if C adds genuine EV. If C is marginal, isolating AB as a Double often produces a higher EV per staked pound.
+
+### Heinz and above: when does scale beat coverage?
+
+Large perms like a Heinz multiply coverage across many fold sizes but escalate cost and variance. They suit bettors with a consistent edge across multiple selections and a bankroll plan that tolerates swings.
+
+- Heinz (6 selections, 57 bets): 15 doubles, 20 trebles, 15 fourfolds, 6 fivefolds, 1 sixfold.
+- Super Heinz (7 selections, 120 bets): 21 doubles, 35 trebles, 35 fourfolds, 21 fivefolds, 7 sixfolds, 1 sevenfold.
+- Goliath (8 selections, 247 bets): 28 doubles, 56 trebles, 70 fourfolds, 56 fivefolds, 28 sixfolds, 8 sevenfolds, 1 eightfold.
+
+When scale can beat smaller coverage: (1) your selections are genuinely value (positive EV) and broadly independent; (2) your strike rate sustains multiples so that higher‑fold winners appear often enough to offset the many losing components; (3) staking is sized to bankroll (e.g., small unit stakes) so variance is survivable. If your edge is narrow or concentrated in few legs, or you prefer tighter control, smaller structures (Trixie, Doubles, Trebles) are typically superior. Remember that bookmaker overround compounds through multiples; only real edge can overcome that in the long run.
+
+## How did Trixie multiples evolve — and when is using one a bad idea?
+
+Trixies are part of the UK “full-cover” family of multiple bets designed to spread risk across combinations of the same set of selections. They evolved alongside other named perms such as the Yankee, Canadian (Super Yankee), Heinz, and Patent. A Trixie uses three selections to create three doubles and a treble, deliberately omitting singles to focus stake on combination payouts. This section outlines where Trixies sit historically, the main argument against using them, and how to quantify bankroll impact and variance so you can decide when a Trixie is a smart choice — and when it is not.
+
+### From Yankees and Patent bets to modern Trixies: a brief history
+
+Full-cover combinations became staples of British bookmaking as a way to balance risk and reward across several selections without having to place each combination manually. Names distinguish the number of selections and whether singles are included. A Trixie (3 selections, 4 bets) is the lean, combination-only option; a Patent (3 selections, 7 bets) adds singles for softer variance; larger sets (Yankee, Canadian, Heinz) expand the grid of doubles through higher folds as the number of selections grows.
+
+- Trixie: 3 selections, 4 bets (3 doubles + 1 treble), no singles.
+- Patent: 3 selections, 7 bets (3 singles + 3 doubles + 1 treble).
+- Yankee: 4 selections, 11 bets (6 doubles + 4 trebles + 1 fourfold), no singles.
+- Canadian (Super Yankee): 5 selections, 26 bets, no singles.
+- Heinz: 6 selections, 57 bets, no singles.
+
+### What’s the strongest argument against Trixies?
+
+The strongest argument is stake dilution without sufficient edge on all three selections. Because a Trixie spreads your money across three doubles and one treble, one weak or negative‑EV leg can destroy overall value: if that leg loses, it can wipe out two doubles and the treble at once. If you regularly hit only one winner from three, a Trixie returns nothing, whereas a Patent at least has singles that can recoup part of the outlay. In short, Trixies reward clustered success (two or three winners) but punish isolated winners.
+
+- Minimum winners: win‑only Trixies need at least two winners for any return.
+- Edge concentration: adding a marginal third selection can reduce overall EV versus staking more on your best two as a single Double.
+- Overround compounding: bookmaker margin compounds across legs; only genuine value can overcome this in multiples.
+- Use‑case fit: Trixies suit bettors who expect two or more winners reasonably often at sensible prices; otherwise, variance and negative EV can dominate.
+
+### Bankroll and variance: what’s the cost of error?
+
+Cost of error shows how much a single miss hurts a Trixie. The table below uses a win‑only Trixie with £1 unit stakes per component (total outlay £4) and the same three decimal prices across scenarios. It quantifies returns and ROI when different numbers of selections win. These figures are mechanical outcomes from standard multiple-bet settlement.
+<table><thead><tr><th>Scenario</th><th>Selections (Decimal)</th><th>Paying Components</th><th>Total Stake</th><th>Total Return</th><th>Profit</th><th>ROI</th></tr></thead><tbody><tr><td>All three win</td><td>A 2.50, B 2.00, C 3.00</td><td>AB=£5.00; AC=£7.50; BC=£6.00; ABC=£15.00</td><td>£4.00</td><td>£33.50</td><td>£29.50</td><td>737.50%</td></tr><tr><td>Exactly two win (A &amp; B win; C loses)</td><td>A 2.50, B 2.00, C 3.00</td><td>AB=£5.00</td><td>£4.00</td><td>£5.00</td><td>£1.00</td><td>25.00%</td></tr><tr><td>Exactly two win (A &amp; C win; B loses)</td><td>A 2.50, B 2.00, C 3.00</td><td>AC=£7.50</td><td>£4.00</td><td>£7.50</td><td>£3.50</td><td>87.50%</td></tr><tr><td>Exactly two win (B &amp; C win; A loses)</td><td>A 2.50, B 2.00, C 3.00</td><td>BC=£6.00</td><td>£4.00</td><td>£6.00</td><td>£2.00</td><td>50.00%</td></tr><tr><td>One or zero win</td><td>A 2.50, B 2.00, C 3.00</td><td>—</td><td>£4.00</td><td>£0.00</td><td>−£4.00</td><td>−100.00%</td></tr></tbody></table>
+
+Reading the numbers: with three winners, upside is strong because all components land. With exactly two winners, returns vary by which pair lands, reflecting different price products (AC pays more than AB or BC here). The “cost of error” is clearest when one or zero wins: the entire Trixie returns £0, so your outlay becomes the loss. Mitigation tactics include improving selection quality (positive EV), avoiding marginal third legs, or reallocating some stake to a Double on the strongest pair or to a Patent if you want singles for variance control.
+
+## Frequently Asked Questions
+
+### How do I calculate each‑way Trixie returns step by step?
+
+An each‑way Trixie is 8 bets: settle the 4 win parts at win odds and the 4 place parts at reduced place odds, then add both totals. Use place decimal = 1 + f × (d − 1), where d is win decimal and f is the place fraction (for 1/5, f=0.20). Example: A 3.50, B 2.75, C 5.00, terms 1/5, £1 each‑way unit stake (so £2 per component, £16 total). Place decimals are A 1 + 0.2×2.5 = 1.50, B 1 + 0.2×1.75 = 1.35, C 1 + 0.2×4.0 = 1.80. If all three win, win‑part returns: AB £1×3.50×2.75=£9.63, AC £1×3.50×5.00=£17.50, BC £1×2.75×5.00=£13.75, ABC £1×3.50×2.75×5.00=£48.13 (total £89.01). Place‑part returns: AB £1×1.50×1.35=£2.03, AC £1×1.50×1.80=£2.70, BC £1×1.35×1.80=£2.43, ABC £1×1.50×1.35×1.80=£3.65 (total £10.81). Combined return £99.82; profit £83.82.
+
+### How are Rule 4 deductions applied in a Trixie when there are multiple withdrawals?
+
+Apply Rule 4 to the profit part of each affected leg before multiplying: replace each affected leg’s decimal d with d′ = 1 + (1 − D) × (d − 1), where D is the total deduction (e.g., 0.30 for 30p). For multiple withdrawals in the same race, add deductions and cap at the bookmaker’s limit (commonly 90p in the pound; check rules). Example: A 3.50 with a 30p deduction becomes 1 + 0.70×2.50 = 2.75; if two withdrawals total 50p, A becomes 1 + 0.50×2.50 = 2.25. In a Trixie, use the adjusted price for every component containing that selection; unaffected legs remain at their original odds.
+
+### How is a dead heat settled inside a Trixie?
+
+Settle the affected part at full odds on a reduced stake: for an n‑way dead heat, use stake/n at the original odds. Equivalent shortcut for a single leg is an effective decimal of d/n for the impacted part. Example 1 (win market, two‑way tie): £2 at 4.00 becomes £1×4.00 = £4.00 return (the other £1 is lost). Example 2 (each‑way, three‑way dead heat for 2nd with 1/5 terms, d=6.00): place decimal is 1 + 0.2×5 = 2.0; with a three‑way tie on the place part, £2 place stake settles as £2/3 at 2.0 = £1.33 return; the win part is unaffected unless it also tied for the win.
+
+### What happens if one leg is void or a non‑runner in a Trixie?
+
+Treat a void as decimal 1.00 and reduce folds accordingly: any double containing the void becomes a single, and the treble becomes a double on the remaining live legs. Example: Unit stake £2 per bet, A 3.00, B 2.00, C void. Settlements: AB double £2×3.00×2.00=£12.00; AC becomes single on A £2×3.00=£6.00; BC becomes single on B £2×2.00=£4.00; ABC treble becomes another AB double £2×3.00×2.00=£12.00. Total return £34.00 from £8.00 staked; profit £26.00.
+
+### Can I place a Trixie on related markets from the same match or event?
+
+Generally no: most bookmakers prohibit related contingencies in multiples, so markets that are causally linked (e.g., Team to Win and Player to Score in the same match) cannot form a Trixie. If the operator offers a same‑game multi/bet‑builder, it is usually a single bespoke bet and cannot be combined into an external Trixie; check house rules before placing.
+
+### What are the break‑even odds for a win‑only Trixie with unit stakes?
+
+With unit stake s on each component (4s total), a two‑winner outcome breaks even when d1×d2 ≥ 4.00. Example: if your two winners are 2.00 and 2.10, their product is 4.20, so a single paying double returns s×4.20, which exceeds the £4s outlay by 5% of s; if it were 2.00×2.00=4.00, you exactly break even on the whole Trixie.
+
+### How do I calculate the chance of any return and the expected value (EV) of a Trixie?
+
+For independent legs with win probabilities pA, pB, pC, the chance of any return (win‑only) is pA pB (1−pC) + pA pC (1−pB) + pB pC (1−pA) + pA pB pC. EV with unit stake s per component is s[dA dB pA pB + dA dC pA pC + dB dC pB pC + dA dB dC pA pB pC]. Example: A d=3.00 p=0.40, B d=2.25 p=0.50, C d=1.80 p=0.60 gives P(return)=0.08+0.12+0.18+0.12=0.50 (50%); EV per s is 6.75×0.20 + 5.40×0.24 + 4.05×0.30 + 12.15×0.12 = 5.319, so EV on a £1 unit stake Trixie is £5.319 return vs £4 outlay (illustrative only; real edges vary).
+
+### How do free‑bet (stake not returned) promotions affect a Trixie calculation?
+
+For a stake‑not‑returned free bet, each winning component returns stake × (product decimal − 1) instead of stake × product decimal. Example: a £2 free‑bet unit stake on a double priced 6.75 returns £2×(6.75−1)=£11.50, not £13.50. If you apply one free‑bet token as a total Trixie stake, it is split equally across the 4 components and the SNR rule applies to each winning component; always confirm the promo permits perms.
+
+### How are rounding and pennies handled on UK Trixie settlements?
+
+Operators usually display returns to 2 decimal places and round at the final bet level, though some round components first; the difference is typically ≤£0.01 per component. Example: if three components each compute to £10.005, rounding components first yields £30.03; rounding after summing £30.015 yields £30.02. Your calculator should match your bookmaker’s published rounding policy.
+
+### Are Trixie winnings tax‑free in the UK and Ireland?
+
+Yes for customers: as of 2026, UK and Irish fixed‑odds winnings are not taxed at the point of payout; operators pay duties, not bettors. If you bet from other jurisdictions, tax treatment can differ; verify local law before assuming net‑of‑tax returns.
+
+### Do maximum payout limits apply to Trixies, and can they cap my return?
+
+Yes, bookmakers publish per‑sport and per‑event maximum payout limits, and a Trixie is usually treated as one bet against that cap. Example: if your calculated return is £280,000 but the sport’s maximum payout is £250,000, settlement is capped at £250,000 even if component math is higher; check the operator’s limits before staking.
+
+### Why does my Trixie show £0 return even though two selections "won"?
+
+Most often one "win" was a place‑only outcome on a win‑only Trixie, a dead‑heat or Rule 4 reduction was mis‑set, or a leg was voided and no remaining pair actually formed a winning double. Quick audit: confirm Trixie type (win‑only vs each‑way), verify each leg’s result flag (win/lose/void), recheck dead‑heat fractions and Rule 4 inputs, and ensure at least one double genuinely contains two full winners.
+
+### Can I build a Trixie from Irish Lotto selections, and what should I watch for?
+
+You can only if your bookmaker permits lotto multiples across different draws/markets; same‑draw combinations are often restricted. Example: if a firm prices a 1‑number pick at 6/1 (decimal 7.00) and you choose three different draws, a £1 unit‑stake Trixie has doubles returning £7.00×7.00=£49.00 each and the treble £7.00×7.00×7.00=£343.00 if all land; confirm eligibility before relying on these figures.
+
+### How should pushes and Asian handicap lines be handled in a Trixie?
+
+A push settles that leg as void (decimal 1.00) and reduces folds as usual. For split Asian lines (e.g., +0.25), settlement splits the stake across two sub‑lines; to mirror this in a standard Trixie calculator, duplicate the selection into two legs with half stakes (one at 0 and one at +0.5) and settle each outcome, then sum the components.
+
+### How can I sanity‑check odds inputs to avoid calculation errors in a Trixie?
+
+Convert all odds to decimals and spot‑check: fractional a/b should become 1 + a/b; American +x becomes 1 + x/100; American −x becomes 1 + 100/x. Example: 5/4→2.25, +150→2.50, −110→1.9091. If any converted decimal is ≤1.00 or negative, the input is invalid and will produce £0 or nonsensical returns.

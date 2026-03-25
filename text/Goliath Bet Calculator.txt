@@ -1,0 +1,349 @@
+**Title:** Goliath Bet Calculator Quick Returns Live 2026
+
+ **Description:** Free Goliath bet calculator for UK bettors. Live returns for football and racing with each-way, Rule 4, dead heats, partial wins, and export to Excel/CSV.
+
+# Goliath Bet Calculator
+
+Free, fast Goliath returns for UK bettors. Enter odds, results and stakes to see instant payouts, including each-way, Rule 4 and dead-heat handling. Works for football and horse racing. Not affiliated with any bookmaker.
+
+## Calculate Goliath returns online: how does this tool work?
+
+A Goliath is a full‑cover combination bet on eight selections without singles. It contains 247 separate bets: 28 doubles, 56 trebles, 70 fourfolds, 56 fivefolds, 28 sixfolds, 8 sevenfolds, and 1 eightfold accumulator. A calculator replicates bookmaker settlement rules leg by leg, applying outcomes (win/lose/void/placed/dead heat), each‑way place terms where chosen, any Rule 4 deductions, and rounding, then aggregates the returns across all 247 lines. If placed each‑way, every line has a win part and a place part, doubling the number of bets to 494.
+
+### What inputs do you need for a Goliath bet?
+
+To price a Goliath accurately, you must supply stake settings, odds and settlement details for each of the eight legs, plus any rule-based adjustments that apply to specific events (mainly horse racing). Use the checklist below.
+
+Stake mode:
+ 
+- Per‑bet (unit) stake for each of the 247 lines (e.g., £0.10 per bet), or
+- Total stake across all lines (the calculator back‑solves the per‑bet stake).
+
+Each‑way toggle:
+ 
+- Win‑only (247 bets) or Each‑way (494 bets = win + place parts on every line).
+- If Each‑way, define place terms per relevant leg (e.g., 1/5 odds, 3 places).
+
+Odds format:
+ 
+- Fractional (e.g., 7/2), Decimal (e.g., 4.50), or American (e.g., +350).
+
+For each of the 8 selections (legs):
+ 
+- Selection name and event (e.g., Team A, 3:00 Kempton).
+- Odds for the win market (and, for EW, the place terms as above).
+- Result status: Win, Lose, Void/Non‑runner, Dead Heat (win), Placed (for EW).
+- Rule 4 deduction (horse racing only, if applicable), entered as pence per £1 (e.g., 20p = 0.20).
+
+Optional settlement options (if the calculator supports them):
+ 
+- Free bet stake not returned (affects stake treatment on winning lines).
+- Cash‑out or partial‑win flags (rare for perms; only if explicitly supported).
+- Rounding behaviour (end‑of‑bet rounding to the nearest penny is standard in the UK; some bookies round at the leg level).
+
+Stake arithmetic example: With a unit stake of £0.10 win‑only, the total outlay is £0.10 × 247 = £24.70. If each‑way at £0.10 per part, total outlay doubles to £49.40.
+
+### Each-way, Rule 4, and dead heats: how are they applied?
+
+These three mechanisms change how individual legs in your Goliath settle. The calculator applies them on a per‑leg basis before compounding returns through the permutations.
+
+Each‑way settlement:
+ 
+- Every line splits into two equal stakes: a win part and a place part.
+- The place odds are the win odds multiplied by the place fraction. Example: 8/1 at 1/5 terms becomes 8/5 (decimal 2.60 including stake).
+- Win part pays only if the selection wins; place part pays if the selection finishes within the specified places. If a leg is void, both parts for that leg are settled at odds of 1.00 (stake carried forward) in any affected multiples.
+
+Rule 4 (late withdrawal deductions, horse racing):
+ 
+- Applied to winnings (excluding the stake) on affected legs when a rival is withdrawn after final declarations. The deduction rate depends on the withdrawn horse’s price band under Tattersalls Rule 4.
+- Calculation: net_win_after_rule4 = net_win × (1 − d), where d is the deduction per £1 (e.g., 0.20 for a 20p deduction). The stake is not reduced.
+- Deductions can apply to both win and place markets if the withdrawal affects both.
+
+Dead heat rules:
+ 
+- For a win dead heat among n horses where 1 winning place is available, the effective return is adjusted by a factor of 1/n (equivalent to dividing the stake by n at full odds).
+- For a dead heat for the last paying place where k places remain among n tied runners, the place return is adjusted by k/n. Example: EW terms pay 3 places; two horses tie for 3rd (k=1, n=2) ⇒ place part is halved.
+- The dead‑heat factor is applied at the leg level before the multiple continues to subsequent legs.
+
+Voids and non‑runners in multiples:
+ 
+- Any permutation containing a void leg settles that leg at odds of 1.00 (stake moves to the next leg), effectively reducing the fold by one for that line.
+<table><thead><tr><th>Market</th><th>Scenario</th><th>Positions available (k)</th><th>Tied runners (n)</th><th>Dead‑heat factor (k/n)</th><th>Effect on settlement</th></tr></thead><tbody><tr><td>Win</td><td>2‑way dead heat for 1st</td><td>1</td><td>2</td><td>1/2</td><td>Half stake (or 0.5 factor) at full odds</td></tr><tr><td>Win</td><td>3‑way dead heat for 1st</td><td>1</td><td>3</td><td>1/3</td><td>One‑third stake (or 0.333… factor) at full odds</td></tr><tr><td>Each‑way (place part)</td><td>Tie for final paying place</td><td>1</td><td>2</td><td>1/2</td><td>Place return halved for tied runners</td></tr></tbody></table>
+
+### Stake, odds formats, and permutations: quick overview
+
+This section summarises how your money is staked across the 247 lines, how to convert between odds formats, and the exact composition of a Goliath. Always verify that the per‑bet stake and odds format in the calculator match your slip.
+
+Stake distribution:
+ 
+- Win‑only total stake = unit stake × 247.
+- Each‑way total stake = unit stake × 494 (win + place parts).
+- Example: £0.20 unit EW stake ⇒ £0.20 × 494 = £98.80 total outlay.
+
+Rounding:
+ 
+- UK bookmakers typically round final returns down to the nearest penny. Some apply intermediate rounding per leg; check your bookmaker’s rules.
+<table><thead><tr><th>Fold</th><th>Number of bets</th><th>Share of Goliath</th><th>Cumulative bets</th></tr></thead><tbody><tr><td>Doubles</td><td>28</td><td>11.34%</td><td>28</td></tr><tr><td>Trebles</td><td>56</td><td>22.67%</td><td>84</td></tr><tr><td>Fourfolds</td><td>70</td><td>28.34%</td><td>154</td></tr><tr><td>Fivefolds</td><td>56</td><td>22.67%</td><td>210</td></tr><tr><td>Sixfolds</td><td>28</td><td>11.34%</td><td>238</td></tr><tr><td>Sevenfolds</td><td>8</td><td>3.24%</td><td>246</td></tr><tr><td>Eightfold</td><td>1</td><td>0.40%</td><td>247</td></tr></tbody></table>
+
+
+<table><thead><tr><th>From</th><th>To</th><th>Formula</th><th>Example</th></tr></thead><tbody><tr><td>Fractional a/b</td><td>Decimal</td><td>1 + a/b</td><td>7/4 ⇒ 1 + 7/4 = 2.75</td></tr><tr><td>Decimal D</td><td>Fractional</td><td>(D − 1) as a reduced fraction</td><td>2.50 ⇒ 1.50 ⇒ 3/2</td></tr><tr><td>American +X</td><td>Decimal</td><td>1 + X/100</td><td>+150 ⇒ 1 + 150/100 = 2.50</td></tr><tr><td>American −X</td><td>Decimal</td><td>1 + 100/X</td><td>−200 ⇒ 1 + 100/200 = 1.50</td></tr></tbody></table>
+
+Permutation compounding:
+ 
+- Each winning leg multiplies the running return by its decimal odds (or by the place odds for EW place parts), after any Rule 4 or dead‑heat factor is applied.
+- Voids contribute a factor of 1.00; losing legs terminate only the specific lines that include them.
+
+## How do I use the Goliath bet calculator?
+
+The calculator prices an eight-selection Goliath by settling each leg exactly as a bookmaker would, then compounding returns across all 247 lines (or 494 lines if each-way). Enter your stake mode (unit or total), choose win-only or each-way, set odds and results for every leg, and apply any racing-specific adjustments (Rule 4, dead heats, place terms) where relevant. Football multiples are fully supported; racing legs use industry-standard each-way and deduction rules.
+
+- Select stake mode: per-bet unit stake or total stake (the tool derives the unit).
+- Choose Win-only or Each-way (each-way doubles the number of bets).
+- For each of the 8 legs, input odds and pick a settlement outcome (Win, Lose, Void, Placed, Dead Heat).
+- For racing legs, set place terms (e.g., 1/5 3 places) and any Rule 4 deductions shown at settlement.
+- Review the line-by-line breakdown, total return, and net profit. Adjust inputs to model alternative results.
+
+### Can I calculate a Goliath for football multiples?
+
+Yes. Football markets settle on clearly defined rules that a Goliath calculator can model accurately. Since football has no each-way or Rule 4 concepts, entries are simpler: set odds, choose the result for each leg, and mark any voids (e.g., draw-no-bet pushes, postponed games) so affected lines carry forward at odds of 1.00.
+
+- Supported examples: Match Result (1X2), Draw No Bet, Double Chance, Over/Under Goals, Both Teams To Score, Correct Score, Team To Qualify/To Lift the Trophy.
+Time basis:
+ 
+- Most pre-match markets (1X2, O/U, BTTS, Correct Score) settle on 90 minutes plus stoppage time—extra time and penalties do not count.
+- “Team To Qualify/To Lift the Trophy” includes extra time and penalties by design.
+
+Voids/pushes:
+ 
+- Draw No Bet that ends drawn settles as a push (void) and counts as 1.00 in any multiple.
+- Abandoned/postponed matches are typically voided by bookmakers for pre‑match markets; mark the leg as Void.
+<table><thead><tr><th>Market</th><th>Settled on 90 mins + stoppage?</th><th>Extra time/penalties included?</th><th>Push outcome in multiple</th><th>Rule 4 applies?</th><th>Each‑way available?</th></tr></thead><tbody><tr><td>Match Result (1X2)</td><td>Yes</td><td>No</td><td>Not applicable</td><td>No</td><td>No</td></tr><tr><td>Draw No Bet</td><td>Yes</td><td>No</td><td>Void (counts as 1.00)</td><td>No</td><td>No</td></tr><tr><td>Double Chance</td><td>Yes</td><td>No</td><td>Not applicable</td><td>No</td><td>No</td></tr><tr><td>Over/Under Goals</td><td>Yes</td><td>No</td><td>Not applicable</td><td>No</td><td>No</td></tr><tr><td>Both Teams To Score</td><td>Yes</td><td>No</td><td>Not applicable</td><td>No</td><td>No</td></tr><tr><td>Correct Score</td><td>Yes</td><td>No</td><td>Not applicable</td><td>No</td><td>No</td></tr><tr><td>Team To Qualify / Lift Trophy</td><td>No</td><td>Yes</td><td>Not applicable</td><td>No</td><td>No</td></tr></tbody></table>
+
+Tip: When mixing football and racing in the same Goliath, mark football legs as Win/Lose/Void only, and reserve Each‑way and Rule 4 settings for racing legs. This keeps permutations consistent and prevents accidental place terms on sports that don’t support them.
+
+### How does it handle horse racing each-way and Rule 4?
+
+Racing legs require two additional inputs—each‑way place terms and any Rule 4 deduction—so the calculator can mirror bookmaker settlement precisely. Each winning leg multiplies the running return by decimal odds after adjustments; voids contribute a factor of 1.00; losses end only the lines that contain that leg.
+
+Each‑way place terms (industry‑standard defaults; bookmakers may enhance places on specific races):
+ 
+- 1–4 runners: Win‑only (no place part offered).
+- 5–7 runners (all races): 1/4 the odds, 1–2 places.
+- 8+ runners (non‑handicaps): 1/5 the odds, 1–3 places.
+- Handicaps 12–15 runners: 1/4 the odds, 1–3 places.
+- Handicaps 16+ runners: 1/4 the odds, 1–4 places.
+
+Rule 4 deductions:
+ 
+- Applied to net winnings (not the stake) when a declared runner is withdrawn after final declarations.
+- Enter the deduction as pence in the pound (e.g., 10p = 0.10); the calculator reduces the win and, if applicable, place winnings by that factor.
+- If multiple withdrawals occur with separate published deductions, apply the combined deduction as published by the bookmaker/settlement rules.
+
+Dead heats:
+ 
+- Win dead heat among n runners: effective factor 1/n on the affected part.
+- Dead heat for last paying place with k places available among n tied: factor k/n on the place part.
+
+Worked example (EW line): £0.50 EW per line, selection wins at 10/1 with 1/5 place terms and a 10p Rule 4. Decimal win odds = 11.00; decimal place odds = 1 + (10 × 1/5) = 3.00. Rule 4 reduces winnings by 10%: win return = £0.50 × [1 + (10 × 0.9)] = £5.95; place return = £0.50 × [1 + (2 × 0.9)] = £1.90. The calculator compounds these adjusted returns through all affected multiples.
+
+### Can I export to Excel or CSV?
+
+Yes. Use Export to CSV to download the full line‑by‑line settlement, then open it in Excel, Google Sheets, or Numbers. CSV preserves numeric precision and is widely supported; Excel also opens .tsv and .xlsx if provided. Exports include both summary figures (total stake, total return, profit) and a breakdown of all 247 (or 494 EW) lines for auditing.
+
+Typical export fields:
+ 
+- Bet ID / Line number, Line type (Double, Treble, Fourfold... Eightfold)
+- Unit stake (win/place), Cumulative decimal multiplier, Line return, Line profit
+- Per‑leg detail: Event, Selection, Entered odds, Decimal odds, Result, Void flag, Place terms, Rule 4
+- Totals: Total stake, Total return, Net profit, ROI
+
+Excel import tips:
+ 
+- Excel: Data → From Text/CSV → Delimiter = Comma → Data Type Detection = Do not detect types (to keep fractional odds as text).
+- Google Sheets: File → Import → Upload CSV → Separator = Comma → Convert text to numbers/dates = Off.
+- Rounding: Display to 2 decimal places for currency; underlying calculations use full precision to the penny.
+
+If you need a quick copy without downloading, use “Copy table” and paste into a sheet; most spreadsheets will auto-split into columns. For audit trails, keep the original CSV with the exact inputs used to generate the results.
+
+## Alternatives and comparisons: when to choose other bet types?
+
+Full-cover multiples vary by how many selections they include and whether they cover singles. Choosing between a Goliath, Super Heinz, Lucky 63, Lucky 31, or a Yankee depends on bankroll, expected strike rate, average odds, and whether you need singles for insurance. Use the comparison below to match stake efficiency and volatility to your strategy.
+
+### Goliath vs Super Heinz: which suits bigger fields?
+
+Both are full-cover perms without singles, but they scale differently: a Goliath uses eight selections and 247 lines; a Super Heinz uses seven selections and 120 lines. In big-field horse races (e.g., handicaps with 12+ runners) or large football slates, a Goliath each-way can monetise frequent places across more permutations, at the cost of higher stake outlay. A Super Heinz cuts line count by ~51% (120 vs 247), improving stake efficiency when your edge is narrower or bankroll is limited.
+
+- Stake impact: For the same unit stake, Goliath total outlay is 247× the unit (494× EW); Super Heinz is 120× (240× EW). Goliath is roughly 2.06× the cost of a Super Heinz.
+When Goliath fits bigger fields:
+ 
+- You have eight solid value picks and want maximum place coverage in each-way handicaps.
+- You can afford the higher variance and larger total stake for a chance at several mid- to high-fold returns.
+
+When Super Heinz is preferable:
+ 
+- You want similar coverage with 7 selections but at about half the staking footprint.
+- Your expected strike rate is modest in big fields and you prefer lower downside per bet cycle.
+
+### Lucky 63 vs Lucky 31 vs Goliath: what changes?
+
+Lucky bets include singles, which lowers variance and can return something from just one winner—unlike Goliath. As selections increase, so do combinations, total stake, and the potential for compounding returns. Pick Lucky series when you need singles insurance; pick Goliath when you want maximum multi-leg exposure without singles.
+
+Singles insurance:
+ 
+- Lucky 31 (5 picks) and Lucky 63 (6 picks) include singles, so one winner produces a return.
+- Goliath excludes singles—at least two winners are needed to land a double (ignoring void reductions).
+
+Staking and variance:
+ 
+- Goliath has the highest line count among these three, thus highest stake at the same unit.
+- Lucky 31/63 reduce variance and bankroll swings, trading off some explosive upside.
+
+Each-way:
+ 
+- Each-way doubles the number of lines for all three. Lucky bets can return via single places; Goliath requires at least two placed legs to form a paying place multiple (unless voids reduce folds).
+<table><thead><tr><th>Bet type</th><th>Selections</th><th>Singles included?</th><th>Total bets</th><th>Component breakdown</th><th>Minimum winners for any return (win-only)</th><th>Best used when</th></tr></thead><tbody><tr><td>Yankee</td><td>4</td><td>No</td><td>11</td><td>6 doubles, 4 trebles, 1 fourfold</td><td>2</td><td>You want compact coverage with moderate stake and higher average odds</td></tr><tr><td>Lucky 31</td><td>5</td><td>Yes</td><td>31</td><td>5 singles, 10 doubles, 10 trebles, 5 fourfolds, 1 fivefold</td><td>1</td><td>You value singles insurance with five picks and balanced variance</td></tr><tr><td>Lucky 63</td><td>6</td><td>Yes</td><td>63</td><td>6 singles, 15 doubles, 20 trebles, 15 fourfolds, 6 fivefolds, 1 sixfold</td><td>1</td><td>You need singles plus broader coverage across six selections</td></tr><tr><td>Super Heinz</td><td>7</td><td>No</td><td>120</td><td>21 doubles, 35 trebles, 35 fourfolds, 21 fivefolds, 7 sixfolds, 1 sevenfold</td><td>2</td><td>You want full-cover without singles and lower cost than a Goliath</td></tr><tr><td>Goliath</td><td>8</td><td>No</td><td>247</td><td>28 doubles, 56 trebles, 70 fourfolds, 56 fivefolds, 28 sixfolds, 8 sevenfolds, 1 eightfold</td><td>2</td><td>You seek maximum multi-leg exposure and can fund a larger stake</td></tr></tbody></table>
+
+### What is a Yankee, and when is it better than a Goliath?
+
+A Yankee is a 4-selection full-cover bet without singles comprising 11 lines (6 doubles, 4 trebles, 1 fourfold). It needs at least two winners for a return. Choose a Yankee over a Goliath when your bankroll is smaller, you have four strong opinions rather than eight, or you want lower variance and simpler settlement—especially for football markets or short racing cards. It concentrates stake into fewer, higher-impact lines, so a modest strike rate can still return meaningfully without the heavy outlay of 247 lines.
+
+- Bankroll control: 11× unit stake (22× EW) vs 247× (494× EW) for a Goliath.
+Use cases:
+ 
+- Four confident football selections where each leg’s price is fair but not massive.
+- Racing days with limited suitable races, avoiding forced selections to fill an eight-leg perm.
+
+- Trade-off: Lower top-end upside than an 8-leg perm, but more efficient staking for concentrated edges.
+
+## Key facts and FAQs for Goliath bettors
+
+A Goliath is an eight-selection full-cover multiple without singles. It contains 247 separate lines covering every combination from doubles up to an eightfold accumulator. Each-way stakes split every line into a win and a place part, doubling the line count to 494. Returns are produced by the winning (or, for each-way, placing) legs within each permutation; you do not need all eight selections to win to get a payout.
+
+### How many bets are in a Goliath, and how are they grouped?
+
+A Goliath distributes your unit stake across all combinations of your eight selections from doubles to the eightfold. The breakdown below shows the exact composition and helps you anticipate how returns can arrive as more legs win or place.
+
+- Total lines: 247 (win-only). Each-way doubles to 494 (win + place parts).
+Grouping by fold:
+ 
+- 28 doubles
+- 56 trebles
+- 70 fourfolds
+- 56 fivefolds
+- 28 sixfolds
+- 8 sevenfolds
+- 1 eightfold
+
+Settlement logic:
+ 
+- Any line containing a losing leg returns £0 for that line.
+- Voids reduce the fold for affected lines (e.g., a double with one void becomes a single at the remaining leg’s odds).
+- Each-way: the place part pays according to place terms when a selection finishes in the places; the win part requires a win.
+
+### What stake do I need for a full Goliath perm?
+
+Your total outlay is the unit stake multiplied by the number of lines. Win-only uses 247 lines; each-way uses 494. The table gives common unit stakes and the corresponding total stakes so you can match the perm to your bankroll.
+<table><thead><tr><th>Unit stake per line (£)</th><th>Total stake (win-only, 247 lines) (£)</th><th>Total stake (each-way, 494 lines) (£)</th></tr></thead><tbody><tr><td>0.05</td><td>12.35</td><td>24.70</td></tr><tr><td>0.10</td><td>24.70</td><td>49.40</td></tr><tr><td>0.20</td><td>49.40</td><td>98.80</td></tr><tr><td>0.50</td><td>123.50</td><td>247.00</td></tr><tr><td>1.00</td><td>247.00</td><td>494.00</td></tr></tbody></table>
+
+Notes: Enter stakes as “per-bet” (unit) or as a “total stake” and let the calculator derive the unit. UK settlement typically rounds final returns to the nearest penny. Each-way doubles the number of lines; the unit stake is applied separately to the win and place parts of every line.
+
+### Does a Goliath need all selections to win for a return?
+
+No. You do not need all eight to win. The minimum for any return, ignoring voids, is two winning selections (to land at least one double). More winners unlock trebles, fourfolds, etc., compounding returns. In each-way Goliaths, two placed selections can generate a place double return even if neither wins. Voids can also reduce folds; for example, a double comprising one winner and one void settles as a single on the winner within that affected line.
+
+Win-only:
+ 
+- 2 winners ⇒ doubles pay; 3 winners ⇒ doubles + 1 treble; additional winners escalate returns.
+- 1 winner alone yields no return unless paired with a void in a given line (void reduces the fold).
+
+Each-way:
+ 
+- 2 places ⇒ place doubles can return; winners contribute to both win and place parts.
+- Enhanced place terms or extra places (bookmaker offers) affect the place part only.
+
+- Practical takeaway: For steadier coverage, consider Lucky bets (which include singles). For higher multi-leg exposure, Goliath maximises permutations but requires multiple successful legs to pay.
+
+## Expert view: evolution, limits, and the strongest counterargument
+
+Bet settlement has moved from paper coupons and manual spreadsheets to purpose-built web calculators that mirror bookmaker rules like Tattersalls Rule 4 in UK horse racing and 90-minute settlement in football. Modern tools let you model complex perms (Goliath, Super Heinz, Lucky bets), test scenarios, and export results for audit. Still, calculators are only as accurate as their inputs and assumptions, and operator-specific nuances can affect the final settlement.
+
+### How did we move from paper coupons and Excel to live tools?
+
+Historically, UK bettors filled out shop coupons and used newspaper tables or mental arithmetic for doubles and trebles. Early adopters built Excel sheets to automate combinations and settle lines. As online betting grew, independent calculators appeared, encoding generic settlement rules and adding each-way logic, dead-heat factors, and Rule 4 deductions. Today, web calculators provide instant results, line-by-line transparency, mobile usability, and exports for tracking, while leaving operator-specific adjudications (e.g., market voiding policies) to the bookmakers and established authorities.
+
+- Paper era: manual combination counting, high error risk, no export or audit trail.
+- Excel era: user-defined formulas handle combos; flexible but maintenance-heavy and prone to formula errors.
+- Web era: dedicated calculators implement full-cover perms (e.g., Goliath’s 247 lines), each-way splitting, dead-heat factors, and Rule 4 input fields.
+- Standards reference: UK racing settlements use Tattersalls Rule 4 for non-runner deductions; see regulatory and rules resources from the [Gambling Commission](https://www.gamblingcommission.gov.uk/) and the [British Horseracing Authority](https://www.britishhorseracing.com/regulation/rules-and-guides/).
+
+### Where can calculators mislead on settlement rules and edge cases?
+
+Calculators can only reproduce what you tell them. Mis-entered place terms, missed dead-heat factors, or wrong market timing (90 minutes vs to-qualify) will distort results. Operator-specific policies and promotional terms (e.g., Best Odds Guaranteed, extra places, bet boosts) also sit outside a neutral calculator’s scope and must be applied manually after settlement or verified with the bookmaker. For unresolved disputes, independent adjudication is available via [IBAS](https://www.ibas-uk.com/) (UK).
+
+- Each-way terms: Standard place terms depend on race type and number of runners; enhanced “extra places” are promotional and must be entered explicitly.
+- Rule 4: Deductions apply to winnings (not stake) when a runner is withdrawn after final declarations; multiple withdrawals may lead to combined deductions as published at settlement.
+- Dead heats: Apply factor 1/n on win dead heats; apply k/n on ties for the final paying place.
+- Voids/pushes: DNB football legs that end drawn are void; postponed/abandoned events are typically void—mark as such so lines carry forward at 1.00.
+- BOG and boosts: Best Odds Guaranteed and price boosts alter returns after the base settlement; generic calculators usually cannot apply them automatically.
+- Market timing: 1X2, O/U, BTTS settle on 90 minutes + stoppage; “To Qualify/Lift Trophy” includes extra time and penalties—choose the correct market type.
+- Asian handicaps and quarter lines: Half-win/half-loss splits are not universally supported in full-cover calculators; consider a specialist AH tool for those legs.
+- Rounding differences: Some operators round only at the end of the bet; others may apply intermediate rounding—this can cause penny-level variances.
+<table><thead><tr><th>Edge case</th><th>What changes settlement</th><th>Calculator control to use</th><th>Safe input tip</th></tr></thead><tbody><tr><td>EW extra places</td><td>More places than standard terms</td><td>Custom place fraction and places</td><td>Enter the exact advertised places and fraction from your slip</td></tr><tr><td>Dead heat (win)</td><td>n runners share first</td><td>Dead-heat factor 1/n</td><td>Use official result to set n accurately</td></tr><tr><td>Dead heat (place)</td><td>k places available among n tied</td><td>Apply k/n to the place part</td><td>Confirm the number of paying places for that race</td></tr><tr><td>Rule 4 deduction</td><td>Late non-runner after declarations</td><td>Deduction per £1 (e.g., 0.20)</td><td>Use the published deduction on your settlement notice</td></tr><tr><td>Void/push leg</td><td>DNB draw, postponement, abandonment</td><td>Mark as Void</td><td>Treat as 1.00 so affected folds reduce correctly</td></tr><tr><td>BOG uplift</td><td>SP > taken price for winners</td><td>Manual adjustment after base return</td><td>Apply BOG separately if your bookmaker offers it</td></tr><tr><td>Asian handicap (quarter)</td><td>Half-win/half-loss split</td><td>Specialist AH settlement</td><td>Settle those legs with an AH tool, then input the result</td></tr></tbody></table>
+
+### Why not just use the bet365 calculator or bookie tools?
+
+The strongest argument for using a bookmaker’s own calculator is alignment: it reflects that operator’s settlement, rounding, and market definitions, so it’s authoritative for bets placed with them. If your goal is to verify a specific slip at that firm, their tool is ideal. Independent calculators complement—not replace—bookie tools by enabling cross-operator comparisons, custom each-way terms (including extra places), multi-sport mixing, and scenario testing without logging into any account. Many also offer line-by-line transparency suitable for record-keeping. For formal disputes, consult your bookmaker first and, if unresolved, refer to [IBAS](https://www.ibas-uk.com/); for regulatory guidance, see the [Gambling Commission](https://www.gamblingcommission.gov.uk/).
+
+- Use bookmaker tools when you need exact operator-specific settlement and rounding.
+- Use an independent calculator to plan perms, compare staking across firms, or export a full line-by-line audit.
+- Always reconcile promotions (BOG, boosts, extra places) against the bookmaker’s final statement.
+
+## Frequently Asked Questions
+
+### What’s the probability my Goliath returns anything if each leg has win probability p?
+
+It is 1 − [(1−p)^8 + 8p(1−p)^7], because the only losing scenarios are 0 or 1 winner. For p=0.50 this equals 1 − [(0.5^8) + 8·0.5·0.5^7] = 1 − 9/256 = 247/256 ≈ 96.48%; for p=0.35 it is ≈ 82.88%.
+
+### If one selection is void for the whole bet, how do the 247 Goliath lines re-distribute by fold?
+
+A global void reduces folds by one on every line that contained that selection, producing singles and shifting weight to lower folds. The 247 lines become 7 singles, 42 doubles, 70 trebles, 70 fourfolds, 42 fivefolds, 14 sixfolds, and 2 sevenfolds, with zero eightfolds, still totaling 247 settled lines.
+
+### Why do my calculator returns differ by a few pence from the bookmaker?
+
+Penny-level gaps usually come from stake allocation and rounding rules. Example: a £50 each-way total spread over 494 lines implies a per-part unit of £50/494 ≈ £0.101213; if a bookmaker only takes £0.10 per part, £49.40 is staked and 60p is unallocated, causing small variances, which can be amplified by per-leg or end-of-bet rounding and Rule 4 deductions applied to winnings only.
+
+### How do I back-solve the unit stake from a total budget for a Goliath?
+
+Divide your total by the number of lines: unit = total/247 for win-only, or unit per part = total/494 for each-way. For example, £30 win-only gives £30/247 ≈ £0.1215 per line, and £50 each-way gives £50/494 ≈ £0.1012 per part; if your bookmaker restricts to 1p increments, round the unit and note the small over- or under-stake.
+
+### Can I model Asian handicap quarter lines (e.g., +0.25, −0.25) inside a Goliath?
+
+Yes, approximate them by splitting the selection into two parallel legs with half the unit stake on the adjacent half-lines. For +0.25, use half on 0.0 and half on +0.5 at the same price; a draw then settles as half void (0.0) and half win (+0.5). For −0.25, a draw settles as half loss (−0.5) and half void (0.0), keeping multiples accurate to the penny.
+
+### Do UK bettors pay tax on Goliath payouts?
+
+No. UK customers pay 0% tax on betting winnings; tax is levied on operators via duties on gross profits. As a result, calculator returns for UK and Ireland bettors are net to you, with no customer-side deduction.
+
+### Do dead heats for non-final places reduce each-way place returns?
+
+No reduction applies unless the tie involves the final paying place. For example, if 3 places are paid and there is a three-way tie for second, all three are inside the places and the place part pays at full place odds; only a tie for the last place triggers the k/n reduction on the place winnings.
+
+### Does Rule 4 affect both win and place parts, and how should I enter multiple deductions?
+
+Rule 4 applies to winnings (not the stake) on any affected market, so it can reduce both win and place winnings if both markets are impacted. Enter the single combined deduction in pounds-per-pound form as announced at settlement; for example, a 0.15 deduction turns win odds of 10/1 into effective winnings of 10×0.85, so the decimal leg factor becomes 1 + 8.5 = 9.5.
+
+### Which football markets commonly settle as void/push inside a Goliath and how should I input them?
+
+Draw No Bet that ends drawn, Asian Handicap 0.0 that ends drawn, and postponed or abandoned matches typically settle as void; set the leg to Void so affected lines carry forward at 1.00. Markets like Over/Under and Both Teams To Score do not have push states under standard 90-minute rules and should be entered simply as Win or Lose.
+
+### How many winning lines do I get with w winners in a win-only Goliath?
+
+The count is the sum of combinations from doubles up to w-folds: for 2 winners there is 1 line, for 3 winners there are 4 lines, for 4 winners there are 11 lines, for 5 winners there are 26 lines, for 6 winners there are 57 lines, for 7 winners there are 120 lines, and for 8 winners there are 247 lines.
+
+### How do extra places and a dead heat for the last place combine on the each-way part?
+
+Apply a k/n factor to the place winnings when k final places are shared among n tied runners. Example: with 4 places at 1/5 odds, three horses tie for fourth (k=1, n=3) on a 10/1 winner’s place part; decimal place odds are 3.00, winnings are 2.00, adjusted winnings are 2.00×(1/3)=0.6667, so a £1 place stake returns £1.6667.
+
+### Is this calculator valid for Irish racing and international meetings?
+
+It aligns with UK/Ireland settlement conventions such as Tattersalls Rule 4, industry each-way terms, and penny rounding. For other jurisdictions, deductions and place terms can differ; model them by entering the published local place fraction, places, and any equivalent deduction, and expect operator-specific outcomes to vary.

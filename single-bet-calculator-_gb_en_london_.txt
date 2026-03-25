@@ -1,0 +1,342 @@
+**Title:** OddsPilot Single Bet Calculator Official 2026
+
+ **Description:** Free Single Bet Calculator for UK bettors. Enter stake and fractional, decimal, or American odds to see return, profit, and implied probability instantly.
+
+# Single Bet Calculator — Free UK Returns & Profit
+
+Calculate returns, profit, and implied probability on any single in seconds. Built for UK bettors in London: fractional, decimal, or American odds, each-way, and Rule 4 supported.
+
+## How do I use the Single Bet Calculator correctly?
+
+Enter your stake and pick your odds format (fractional, decimal, or American). The calculator then shows total return and profit for a single selection. For UK horse racing, you can also add each-way (split into win and place) and apply any bookmaker-announced Rule 4 deduction to the winnings portion. Always follow the settlement terms shown on your bet slip or by the bookmaker.
+
+### Which odds formats can I choose: fractional, decimal, American?
+
+The calculator accepts all common UK and international formats. You can type fractional odds like 7/4, decimal like 2.75, or American like +175 or -150. The tool converts between formats and uses the correct payout logic for each. Decimal prices include the stake in the return; fractional and American prices express the profit multiple relative to your stake.
+
+- Fractional (a/b): Profit = stake × (a/b); Return = stake + profit.
+- Decimal (D): Profit = stake × (D − 1); Return = stake × D.
+American:
+ 
+- Positive (+X): Profit = stake × (X / 100); Return = stake + profit.
+- Negative (−Y): Profit = stake × (100 / Y); Return = stake + profit.
+
+Implied probability:
+ 
+- Fractional (a/b): b / (a + b)
+- Decimal (D): 1 / D
+- American +X: 100 / (X + 100); American −Y: Y / (Y + 100)
+<table><thead><tr><th>Format</th><th>Input example</th><th>Profit formula</th><th>Return formula</th><th>Implied probability</th></tr></thead><tbody><tr><td>Decimal</td><td>2.75</td><td>stake × (D − 1)</td><td>stake × D</td><td>1 / D</td></tr><tr><td>Fractional</td><td>7/4</td><td>stake × (a/b)</td><td>stake + profit</td><td>b / (a + b)</td></tr><tr><td>American (positive)</td><td>+175</td><td>stake × (X / 100)</td><td>stake + profit</td><td>100 / (X + 100)</td></tr><tr><td>American (negative)</td><td>-150</td><td>stake × (100 / Y)</td><td>stake + profit</td><td>Y / (Y + 100)</td></tr></tbody></table>
+
+
+<table><thead><tr><th>Fractional</th><th>Decimal</th><th>American</th><th>Implied probability</th><th>£10 profit / return</th></tr></thead><tbody><tr><td>1/2</td><td>1.50</td><td>-200</td><td>66.67%</td><td>£5.00 / £15.00</td></tr><tr><td>Evens (1/1)</td><td>2.00</td><td>+100</td><td>50.00%</td><td>£10.00 / £20.00</td></tr><tr><td>11/10</td><td>2.10</td><td>+110</td><td>47.62%</td><td>£11.00 / £21.00</td></tr><tr><td>7/4</td><td>2.75</td><td>+175</td><td>36.36%</td><td>£17.50 / £27.50</td></tr><tr><td>5/2</td><td>3.50</td><td>+250</td><td>28.57%</td><td>£25.00 / £35.00</td></tr><tr><td>4/1</td><td>5.00</td><td>+400</td><td>20.00%</td><td>£40.00 / £50.00</td></tr></tbody></table>
+
+### How do I enter stake, each-way, and Rule 4 deductions?
+
+Follow what is printed on your bet slip. For each-way, enter the place terms (place fraction and number of places). For Rule 4, enter the deduction value announced by the bookmaker (for example, “25p in the pound”). The calculator applies the deduction to the winnings portion; the stake itself is not deducted. Settlement rules are always those of the bookmaker/event.
+
+- Enter stake in GBP (for each-way, your total stake will be doubled because it is two bets: win and place).
+- Select odds format and enter the price (e.g., 8/1, 5.50, +450).
+- If each-way: input the place fraction (e.g., 1/5 or 1/4) and number of places (e.g., 2, 3, 4) as shown by the bookmaker.
+- If Rule 4 applies: input the announced deduction (e.g., 25p). The calculator reduces only the winnings amount by that proportion.
+- Choose the outcome (win or place-only) to see the correct return.
+<table><thead><tr><th>Each-way example (no Rule 4)</th><th>Win part</th><th>Place part (1/5 odds)</th><th>Total if horse wins</th><th>Total if horse places</th></tr></thead><tbody><tr><td>£10 EW at 8/1 (total stake £20)</td><td>Profit £80; Return £90</td><td>Profit £16; Return £26</td><td>£90 + £26 = £116</td><td>£26</td></tr></tbody></table>
+
+
+<table><thead><tr><th>Win single with Rule 4 example</th><th>Before deduction</th><th>Deduction</th><th>After deduction</th><th>Return</th></tr></thead><tbody><tr><td>£10 at 4/1 with a 25p Rule 4</td><td>Profit £40</td><td>£40 × 25% = £10</td><td>Profit £30</td><td>£30 + £10 stake = £40</td></tr></tbody></table>
+
+Note: Apply the exact Rule 4 figure announced for your race. Some bookmakers may specify place-market adjustments separately; always follow their stated settlement.
+
+### Football, racing, tennis: can I calculate returns for any single?
+
+Yes. A single bet is one selection in any market or sport. The calculator handles the core maths across sports; final settlement follows the market rules (e.g., voids, pushes, dead-heats, each-way place terms). Enter the odds and any relevant options (each-way, Rule 4) to see return and profit.
+
+- Football: Works for 1X2, Over/Under, Both Teams to Score, Draw No Bet (DNB). If the market settles as a push/void (e.g., DNB draw), your stake is returned.
+- Tennis: Moneyline prices often use American odds; if a match is voided per bookmaker rules, the calculator’s return equals your stake.
+- Horse racing: Supports win and each-way. Dead-heats are settled by proportionally reducing the effective stake (e.g., two-way dead-heat halves the stake for settlement at full odds).
+<table><thead><tr><th>Sport</th><th>Market &amp; odds</th><th>Stake</th><th>Profit</th><th>Return</th><th>Notes</th></tr></thead><tbody><tr><td>Football</td><td>Home win at 4/5 (1.80)</td><td>£20</td><td>£16.00</td><td>£36.00</td><td>Decimal includes stake in return.</td></tr><tr><td>Tennis</td><td>Player A -150</td><td>£15</td><td>£10.00</td><td>£25.00</td><td>American negative: profit = stake × (100/150).</td></tr><tr><td>Horse racing</td><td>Win single at 5/1 (6.00)</td><td>£10</td><td>£50.00</td><td>£60.00</td><td>Add Rule 4 if announced; EW requires place terms.</td></tr></tbody></table>
+
+Dead-heat example: £10 at 6/1 in a two-way dead-heat is settled as £5 at 6/1, giving £30 profit and £35 return.
+
+## How are return, profit, and implied probability worked out?
+
+For a single bet, the maths is straightforward: profit is the winnings excluding your original stake, return is profit plus stake, and implied probability is the probability the odds encode. Decimal odds already include the stake in the price, while fractional odds state the profit relative to the stake. The calculator uses exact formulas and rounds monetary amounts to the nearest penny at the final step to mirror common UK settlement practice.
+
+### Decimal vs fractional: what changes in the maths?
+
+The fundamental difference is how the stake is represented. Decimal odds (e.g., 2.75) quote the total return per £1 stake, including the £1. Fractional odds (e.g., 7/4) quote the profit per £1 stake, excluding the £1. Both formats convert one-to-one, and the underlying payout is identical once converted correctly.
+
+Formulas:
+ 
+- Decimal (D): Profit = stake × (D − 1); Return = stake × D; Implied probability = 1 / D.
+- Fractional (a/b): Profit = stake × (a / b); Return = stake + profit; Implied probability = b / (a + b).
+- Conversion: D = 1 + (a / b); and a/b = D − 1 (expressed as a fraction).
+
+Interpretation:
+ 
+- Decimal presents “all-in” return per unit stake; mental math is quick: multiply stake by D.
+- Fractional presents just the winnings multiple; you add the stake after calculating profit.
+
+Practical implications in the calculator:
+ 
+- Enter either format; the tool converts precisely and reports both profit and return.
+- Rounding is applied at the final monetary result to the nearest penny.
+- Implied probability is displayed consistently regardless of input format.
+<table><thead><tr><th>Fractional</th><th>Decimal</th><th>Implied probability</th><th>£10 profit</th><th>£10 return</th></tr></thead><tbody><tr><td>1/2</td><td>1.50</td><td>66.67%</td><td>£5.00</td><td>£15.00</td></tr><tr><td>1/1 (Evens)</td><td>2.00</td><td>50.00%</td><td>£10.00</td><td>£20.00</td></tr><tr><td>3/2</td><td>2.50</td><td>40.00%</td><td>£15.00</td><td>£25.00</td></tr><tr><td>7/4</td><td>2.75</td><td>36.36%</td><td>£17.50</td><td>£27.50</td></tr><tr><td>2/1</td><td>3.00</td><td>33.33%</td><td>£20.00</td><td>£30.00</td></tr><tr><td>9/2</td><td>5.50</td><td>18.18%</td><td>£45.00</td><td>£55.00</td></tr></tbody></table>
+
+### Single bet example: £10 at 7/4 step-by-step
+
+This example uses fractional odds of 7/4 (which equals decimal 2.75). We compute profit, return, and implied probability exactly as a UK bookmaker would for a standard win single.
+
+- Convert (optional): 7/4 in decimal is 1 + 7/4 = 2.75.
+- Profit: £10 × (7 ÷ 4) = £10 × 1.75 = £17.50.
+- Return: Profit + stake = £17.50 + £10.00 = £27.50.
+- Implied probability: b / (a + b) = 4 / 11 ≈ 36.36%.
+Settlement cases:
+ 
+- If the selection wins: you receive £27.50.
+- If the selection loses: you receive £0.00.
+- If the selection is void/push: you receive your £10.00 stake back.
+
+Note: If there is a Rule 4 deduction, it applies to the winnings portion (£17.50 here). For example, a 20p Rule 4 reduces the profit by 20% to £14.00, and the return becomes £24.00.
+
+### Will my results match major UK bookmakers like William Hill?
+
+Yes—provided you use the same odds, settlement rules, and any deductions they apply, your profit and return should match to the penny. The calculator implements standard UK formulas for singles. Small discrepancies can occur when a bookmaker’s specific rule affects settlement or rounding. Always check the official rules published by your bookmaker (e.g., [William Hill](https://news.williamhill.com)).
+
+- Rounding policy: Most UK operators round monetary results to the nearest penny at settlement; this tool mirrors that. If a firm rounds at intermediate steps, tiny variances (±£0.01) can appear.
+- Adjustments: Rule 4 deductions, dead-heats (stake proportioning), void/push outcomes, or palpable error corrections will change the final figure versus a simple win/lose calculation.
+- Market terms: Each-way place fractions and number of places, “free bet stake not returned,” boosts, early payouts, or bet builders follow bookmaker-specific terms.
+- Timing: Bets struck before or after a non-runner announcement may face different Rule 4s; settlement will follow the bookmaker’s time-stamped terms.
+
+If your slip includes special conditions (e.g., odds boost or free bet credit), apply those settings to mirror the bookmaker’s settlement; otherwise standard single-bet maths will align.
+
+## Single vs other bet types: doubles, forecasts, and accas
+
+A single bet settles on one selection, so your stake faces one outcome and one overround. Multiples like doubles and accumulators compound prices and risk across legs: the potential profit rises, but so does variance and exposure to bookmaker margin. Forecasts are a different family specific to horse and greyhound racing where you predict the finishing order within one race. Understanding how these structures differ helps you choose the right calculator and avoid hidden settlement pitfalls.
+
+### When is a single better than a double?
+
+A single is often the sharper choice when you have a clear edge on one selection, when legs are uncertain or time-separated, or when you want tighter bankroll control. Because a double requires both legs to win, it increases variance and typically amplifies the bookmaker’s margin across legs.
+
+- Small edge, big variance: If Selection A is value but Selection B is fair or marginally poor value, a double dilutes EV and adds variance versus staking the same amount on the single.
+- Independent legs: With independent events, the combined true-win probability is the product p(A) × p(B). Even modest odds can turn brittle if either leg underperforms.
+- Settlement friction: Voids, pushes, Rule 4 deductions, or timing cut-offs on one leg can downshift a double to a single at 1.00 (decimal) on that leg, eroding the headline payout.
+- Bankroll management: Singles allow grading confidence by staking per selection and avoiding “all-or-nothing” outcomes common in multiples.
+
+Worked EV comparison (illustrative maths, exact to the inputs shown):
+ 
+Single on A at 6/4 (decimal 2.50). True p(A) = 0.45. Stake £10.
+ 
+- Profit if win = £10 × 1.50 = £15.00.
+- EV (profit) = 0.45 × £15.00 + 0.55 × (−£10.00) = £1.25.
+
+Double on A and B, where B is 5/6 (decimal 1.83) with true p(B) = 0.52. Stake £10.
+ 
+- Combined price D = 2.50 × 1.83 = 4.575.
+- Profit if both win = £10 × (4.575 − 1) = £35.75.
+- True p(both) = 0.45 × 0.52 = 0.234.
+- EV (profit) = 0.234 × £35.75 + 0.766 × (−£10.00) ≈ £0.71.
+
+- Conclusion: With one value leg and one fair leg, the single delivers higher EV and lower variance than the double (figures above). Results depend on your true probabilities and the exact odds you take.
+
+### What is a forecast bet and how is it different?
+
+A forecast is a racing bet requiring you to predict the first two finishers in the correct order in the same race (Computer Straight Forecast, or CSF). A reverse forecast is two forecasts covering both orders (A–B and B–A). A combination forecast over n selections places a straight-forecast on every ordered pair, totalling n × (n − 1) bets. Bookmakers settle CSF using an algorithm derived from industry guidelines, while pool bets such as the Tote Exacta settle from the pool dividend; they are distinct products. For background on forecast methodology, see the Horserace Betting Levy Board at [hblb.org.uk](https://www.hblb.org.uk/).
+<table><thead><tr><th>Bet type</th><th>Selections required</th><th>Order matters</th><th>Typical sports</th><th>Each-way available</th><th>Settlement driver</th></tr></thead><tbody><tr><td>Single</td><td>1</td><td>No</td><td>Football, tennis, racing</td><td>Yes (racing markets)</td><td>Fixed-odds at taken price (SP or early/BOG terms may apply)</td></tr><tr><td>Double</td><td>2 (separate events)</td><td>No</td><td>Football, tennis, racing</td><td>Yes (each-way doubles exist)</td><td>Product of leg prices; void leg settles at 1.00 (decimal)</td></tr><tr><td>Forecast (CSF)</td><td>2 (same race)</td><td>Yes (1st then 2nd)</td><td>Horse/greyhound racing</td><td>No</td><td>CSF algorithm (bookmaker rules) or pool alternative if specified</td></tr><tr><td>Reverse forecast</td><td>2 (same race)</td><td>Both orders (2 bets)</td><td>Horse/greyhound racing</td><td>No</td><td>Two CSF settlements, one for each order</td></tr><tr><td>Accumulator (acca)</td><td>3+ (separate events)</td><td>No</td><td>Football, tennis, racing</td><td>Yes (e.g., each-way accas)</td><td>Product of all leg prices; any losing leg loses the bet</td></tr></tbody></table>
+
+Note: CSF (bookmaker forecast) and Tote Exacta (pool) can return different amounts for the same result because their pricing mechanisms differ. Always check the product you placed and the race operator’s rules. For consumer protection guidance, see the UK Gambling Commission at [gamblingcommission.gov.uk](https://www.gamblingcommission.gov.uk/).
+
+### Need a double—when should you switch to a Double Bet Calculator?
+
+Use a Double Bet Calculator whenever your bet links two selections into one wager and the settlement of one leg rolls into the next. This ensures compounded prices, voids, Rule 4s, boosts, and each-way terms are handled correctly across both legs.
+
+- You have exactly two selections and want combined returns (not two separate singles).
+- At least one leg could be void/push (e.g., Draw No Bet, player retirement rules in tennis). The calculator treats a void leg as 1.00 (decimal), turning the double into a single on the remaining leg.
+- Horse racing multiples with each-way terms: an each-way double is two bets (win double and place double); a dedicated double calculator will split and settle both correctly.
+- Rule 4 may apply to one leg only: the deduction should reduce that leg’s winnings before compounding to the second leg.
+- Odds format mixing: you might have fractional on Leg 1 and decimal/American on Leg 2—calculator converts and compounds without rounding drift.
+- Promotions such as odds boosts or “free bet stake not returned” on one leg—these must be applied leg-by-leg before compounding.
+
+Switch to a Double Bet Calculator if you:
+ 
+- Need profit/return for two linked legs (double) or plan to expand to a treble/acca.
+- Require each-way handling across legs (win and place parts settle separately).
+- Expect non-runners or late withdrawals that could trigger Rule 4 in one leg only.
+
+Stay on the Single Bet Calculator if:
+ 
+- You’re evaluating one selection in isolation.
+- You want to compare singles across sports before deciding whether to combine them.
+
+## From paper slips to live tools: the evolution of single bet calculation
+
+Single-bet maths hasn’t changed—profit is the winnings excluding stake, return is profit plus stake—but the way bettors compute it has moved from ready‑reckoner charts and mental arithmetic at the counter to live calculators that factor in UK‑specific settlement rules (e.g., Rule 4), each‑way terms, and market overround. The shift reduced human error, standardised rounding to the penny, and made edge cases (voids, dead‑heats) easier to handle in real time.
+
+### Pre-digital methods: betting shop tables and mental arithmetic
+
+Before online calculators, UK bettors used “ready‑reckoner” tables pinned in shops or printed in booklets to look up profit/return for common fractional odds and stake sizes. Cashiers and regulars also relied on mental shortcuts—adding halves, quarters, and thirds—to estimate payouts quickly while writing paper slips.
+
+- Ready‑reckoners: Lookup grids for frequent odds (e.g., 1/2, 11/10, 7/4, 9/2) across typical stakes (£1, £2, £5, £10, £20).
+Mental shortcuts:
+ 
+- 1/2: add half the stake to get profit (stake £10 → profit £5 → return £15).
+- 7/4: add 1.75× stake for profit (stake £10 → profit £17.50 → return £27.50).
+- Evens (1/1): profit equals stake (stake £10 → profit £10 → return £20).
+
+Limitations:
+ 
+- Edge cases (Rule 4, dead‑heats, place fractions) required ad‑hoc arithmetic and led to rounding inconsistencies.
+- Complex multiples (each‑way doubles/accas) were slow and error‑prone without a calculator.
+
+### Dead ends: generic casino ROI tools that misprice sports odds
+
+Some early “universal” ROI tools treated sports odds like casino house‑edge problems, which led to mispricing. Sportsbooks quote odds in formats (fractional/decimal/American) that encode implied probability and include/exclude stake differently from casino RTP models; applying the wrong model skews returns and edge calculations.
+
+Common errors:
+ 
+- Treating decimal odds as pure profit multipliers (ignoring that D already includes the stake).
+- Ignoring settlement rules (Rule 4 deductions, dead‑heats), or mis‑applying them to the stake instead of winnings.
+- Incorrect American odds handling (e.g., using X/100 for negative prices instead of 100/Y).
+- Missing each‑way place fractions and number‑of‑places, which materially change returns.
+- Misinterpreting pushes/voids as losses instead of stake‑returned outcomes (e.g., Draw No Bet, player retirements under certain tennis rules).
+
+- Result: Over‑ or under‑stated returns, distorted implied probabilities, and unreliable EV estimates for sports markets.
+
+For authoritative standards and consumer protections in Great Britain, consult the UK Gambling Commission at [gamblingcommission.gov.uk](https://www.gamblingcommission.gov.uk/); for racing rules (including deductions and non‑runner handling), see the British Horseracing Authority at [britishhorseracing.com](https://www.britishhorseracing.com/).
+
+### Modern UK specifics: odds formats, overround, and Rule 4
+
+Modern calculators accept fractional, decimal, and American inputs, display implied probability, and highlight the market’s overround (bookmaker margin). They also apply Rule 4 to the winnings portion when a non‑runner shortens the effective field in horse/greyhound races, and handle each‑way terms via place fractions (e.g., 1/5, 1/4) and number of places.
+
+- Odds formats: Enter any of fractional (a/b), decimal (D), or American (+X/−Y). Conversion is exact: D = 1 + a/b.
+- Overround: Sum of implied probabilities from all outcomes; values above 100% represent the bookmaker’s margin.
+- Rule 4: A stated deduction (e.g., “25p in the pound”) reduces the winnings portion by that percentage; the stake is not deducted.
+- Each‑way: Two bets—win and place—where the place part uses a reduced price via the advertised place fraction.
+<table><thead><tr><th>Market (football 1X2)</th><th>Decimal odds</th><th>Implied probability</th><th>Notes</th></tr></thead><tbody><tr><td>Home (1)</td><td>2.10</td><td>47.62%</td><td>Implied probability = 1 / 2.10</td></tr><tr><td>Draw (X)</td><td>3.40</td><td>29.41%</td><td>Implied probability = 1 / 3.40</td></tr><tr><td>Away (2)</td><td>3.60</td><td>27.78%</td><td>Implied probability = 1 / 3.60</td></tr><tr><td>Total</td><td>—</td><td>104.81%</td><td>Overround = 47.62 + 29.41 + 27.78</td></tr></tbody></table>
+
+This example shows a typical UK 1X2 book where the implied probabilities sum to 104.81%, indicating a 4.81% overround baked into the prices. A single bet calculator presents the per‑selection maths (profit/return), while market‑level overround explains why identical “true” probabilities would pay slightly less than fair (100%) pricing once the margin is included.
+
+## Do you even need a calculator for a single bet?
+
+For many straightforward bets, especially with decimal odds, you can mentally work out returns quickly. However, small mistakes in edge cases—like Rule 4 deductions, each-way place fractions, dead-heats, or “free bet stake not returned”—can change the payout by pounds, not pennies. A calculator standardises rounding, applies deductions correctly to the winnings portion only, and mirrors common UK settlement rules.
+
+### Strongest argument: decimal returns look trivial
+
+Decimal odds include the stake in the price, so the arithmetic is simple: Return = stake × decimal odds; Profit = Return − stake. If you know your stake and the decimal price, a quick multiplication gets you the answer without extra steps.
+
+- Formula: Profit = stake × (D − 1); Return = stake × D.
+- Mental shortcut: Multiply by D, then subtract the stake for profit if needed.
+- Consistency: Works the same way across sports and markets for standard win/lose settlement.
+<table><thead><tr><th>Stake</th><th>Decimal odds (D)</th><th>Profit = stake × (D − 1)</th><th>Return = stake × D</th></tr></thead><tbody><tr><td>£10</td><td>1.80</td><td>£8.00</td><td>£18.00</td></tr><tr><td>£10</td><td>2.10</td><td>£11.00</td><td>£21.00</td></tr><tr><td>£15</td><td>2.50</td><td>£22.50</td><td>£37.50</td></tr><tr><td>£20</td><td>3.00</td><td>£40.00</td><td>£60.00</td></tr><tr><td>£10</td><td>5.50</td><td>£45.00</td><td>£55.00</td></tr></tbody></table>
+
+### Counterpoint: edge cases where errors creep in
+
+Seemingly small details can alter settlement. Misplacing the deduction (applying it to the stake), skipping place fractions on each-way bets, or mishandling dead-heats and free bets leads to wrong results. These examples show where a calculator prevents drift.
+
+Rule 4 deduction (applies to winnings only):
+ 
+- Example: £10 at 7/2 (decimal 4.50). Winnings portion = £10 × (3.5) = £35.00.
+- With a 25p Rule 4: Deduction = £35.00 × 25% = £8.75; Adjusted profit = £26.25.
+- Return = £26.25 + £10.00 stake = £36.25 (not £35.00 if you mistakenly deduct stake).
+
+Each-way place terms (place fraction and places):
+ 
+- Example: £10 EW at 8/1, place terms 1/5 odds. Win part profit = £80; Return = £90.
+- Place part price = 8/1 × 1/5 = 8/5 (decimal 2.60). Profit = £10 × 1.60 = £16; Return = £26.
+- Total if the horse wins = £90 + £26 = £116; if only places = £26.
+
+Dead-heat (stake proportioning at full odds):
+ 
+- Example: Two-way dead-heat, £10 at 6/1. Effective settled stake = £5 at 6/1.
+- Profit = £5 × 6 = £30; Return = £35.
+
+Free bet stake not returned (SNR):
+ 
+- Example: £10 free bet at 2.75. Profit = £10 × (2.75 − 1) = £17.50.
+- Return = £17.50 (stake not included), not £27.50.
+
+Void/Push markets:
+ 
+- Example: Draw No Bet ends in a draw. Settlement = stake returned; Profit = £0.00; Return = stake.
+
+Rounding to the penny (final step):
+ 
+- Example: £7.25 at 13/8 (decimal 2.625). Profit = £7.25 × 1.625 = £11.78125 → £11.78.
+- Return = £11.78125 + £7.25 = £19.03125 → £19.03.
+
+### When mental math is fine — and when this tool saves time
+
+Mental math is reliable for straight win singles with clean decimal odds and no special terms. A calculator becomes essential once settlement rules or unusual formats enter the picture, or when you need precise rounding and documentation of assumptions.
+
+Mental math is fine when:
+ 
+- Win single with decimal odds and whole-pound stakes (e.g., £20 at 2.10 → £42 return).
+- Simple fractional prices you know cold (e.g., Evens, 2/1, 4/1) with no deductions.
+- Markets that cannot push/void and have no special settlement clauses.
+
+Use the calculator when:
+ 
+- Rule 4 deductions, dead-heats, or void/push outcomes might apply.
+- Each-way terms require a place fraction and number of places.
+- Stake types vary (cash vs free bet SNR), or promotions/boosts alter one leg.
+- Mixed formats (fractional/decimal/American) or non-round stakes need exact rounding.
+- You want implied probability and quick what-if comparisons across prices/stakes.
+
+## Frequently Asked Questions
+
+### How do I calculate the effective odds after a Rule 4 deduction?
+
+Multiply only the winnings portion by (1 − deduction rate) and then re-add the stake. In decimal terms, D_effective = 1 + (D − 1) × (1 − r); in fractional terms, a/b becomes (a/b) × (1 − r). Example: £10 at 6.00 with a 20% Rule 4 gives D_effective = 1 + 5 × 0.8 = 5.00, profit £40, return £50.
+
+### What’s the difference between Early Price, SP, and Best Odds Guaranteed for singles?
+
+Early Price can be reduced by Rule 4 if non-runners shorten the field; SP (Starting Price) already reflects withdrawals so you don’t apply Rule 4 to SP; Best Odds Guaranteed pays the higher of your adjusted Early Price and the SP if that operator’s terms apply. Example: £10 at 5/1 EP with a 30% Rule 4 becomes 4.50 decimal; if SP is 5.00 and BOG applies, you’re settled at 5.00 for £40 profit and £50 return.
+
+### Are betting winnings taxed in the UK, and how do exchange commissions change profit?
+
+In Great Britain, customer betting winnings are not subject to income tax; exchanges typically charge a commission on net winnings which reduces profit. Example: £10 at 3.00 on an exchange with 5% commission yields gross profit £20; commission £1; net profit £19; net return £29.
+
+### How do I handle free bets (stake not returned) versus cash bets in a single-bet calculation?
+
+For stake-not-returned free bets, return equals profit only; for cash bets, return equals profit plus stake. Example: £10 SNR at 2.75 pays £17.50 return; £10 cash at 2.75 pays £27.50 return. For mixed stakes, calculate each portion separately and add the results.
+
+### Can I solve for the stake needed to hit a target profit or return?
+
+Yes. For decimal odds D, stake for a target profit P is P ÷ (D − 1), and stake for a target return R is R ÷ D. Example: To win £50 at 2.75, stake = 50 ÷ 1.75 = £28.57; to get a £100 return at 1.80, stake = 100 ÷ 1.80 = £55.56.
+
+### How do dead-heats affect each-way place returns on a single?
+
+Reduce the effective settled stake by the number of tied runners sharing that place, then settle at full place odds. Example: £10 each way at 10/1 with 1/5 place terms; horse dead-heats for the final place with one other runner, so the place part stakes £5 at 2/1, profit £10, return £15; the win part loses if the horse did not win.
+
+### Does Rule 4 also apply to the each-way place part, and at what rate?
+
+Unless the bookmaker states a separate place-market reduction, the same Rule 4 rate is applied to winnings on both win and place parts. Example: £10 each way at 8/1 with a 25% Rule 4 and 1/5 place terms: win profit reduces from £80 to £60 (return £70), place profit reduces from £16 to £12 (return £22).
+
+### How do voids and pushes work on Asian Handicap and Draw No Bet singles?
+
+Draw No Bet (AH 0) pushes on a draw, returning the full stake; quarter lines split outcomes. Example: £40 at 1.95 on AH +0.25 draws as half win and half push, so profit = 0.5 × £40 × (1.95 − 1) = £19 and total return £59; AH −0.25 on a draw is half loss and half push, returning £20 with a £20 loss.
+
+### How should results be rounded to match bookmaker settlement?
+
+Round the final monetary amounts to the nearest penny; many UK firms round at the last step, not in intermediate steps. Example: £7.25 at 13/8 gives raw profit £11.78125 and return £19.03125; rounded profit £11.78 and return £19.03; if a firm rounds mid-calculation, a ±£0.01 variance can occur.
+
+### How do I model an odds boost or a profit boost on a single bet?
+
+An odds boost increases decimal odds directly, while a profit boost adds a percentage to the winnings portion. Example: £20 at 3.50 with a 20% profit boost yields baseline profit £50 plus £10 extra for £60 profit and £80 return; with an odds boost to 3.85, profit becomes £57 and return £77.
+
+### What happens to a single if my selection is a non-runner under NRNB or ante‑post rules?
+
+With Non-Runner No Bet, your stake is returned if your selection does not run; under ante-post rules a non-runner is typically settled as a loss. Example: £20 NRNB returned £20 if withdrawn; £20 ante-post loses £20 if your runner is declared a non-runner.
+
+### Can I use the single-bet maths in EUR or USD instead of GBP?
+
+Yes; the calculations are currency-agnostic and scale linearly. Example: €15 at 2.40 pays €36 return and €21 profit; to compare in GBP, convert using your FX rate, for instance €36 × 0.86 ≈ £30.96.
+
+### How do I get implied probability after a Rule 4 deduction?
+
+First compute the effective odds after the deduction, then invert. Example: 6.00 with a 20% Rule 4 becomes D_effective = 5.00, so implied probability is 1 ÷ 5.00 = 20.00% rather than the original 16.67% from 6.00.
+
+### Can a single-bet calculator predict Cash Out values accurately?
+
+No; cash out is a live pricing function that applies the operator’s current odds and margin, which vary by time and market. As a reasonableness check, if the live fair decimal is 1.90 on your £50 stake, a margin-adjusted cash out at a 2% discount would be about £50 × 1.90 × 0.98 = £93.10, but actual offers can differ.

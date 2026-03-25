@@ -1,0 +1,261 @@
+**Title:** NoVigCalc No-Vig Fair Odds Calculator Official 2026
+
+ **Description:** Use NoVigCalc’s no‑vig fair odds calculator (UK) to strip margin, convert decimal/American/fractional, and price 3‑way markets. Web and app workflow. Official tool 2026.
+
+# No‑Vig Fair Odds Calculator (UK) — True Price Tool
+
+Instantly remove the bookmaker overround to find fair odds for UK markets. Convert between decimal, American, and fractional formats, price 3‑way outcomes, and sanity‑check value—without betting advice.
+
+## What is a No‑Vig Fair Odds Calculator and how does it work?
+
+A no‑vig (zero‑margin) fair odds calculator removes the bookmaker’s overround (vig) from market prices to estimate the “true” probabilities and their corresponding fair odds. It converts each posted price into an implied probability, normalises those probabilities so they sum to 100%, and converts them back to odds in your preferred format. This is standard practice in UK and European markets (decimal), but the same logic applies to American and fractional odds.
+
+### How do you calculate no‑vig odds from bookmaker lines?
+
+The proportional normalisation method is the market standard for removing margin from prices quoted by a single bookmaker. It assumes the vig is distributed in proportion to each selection’s implied probability.
+
+Convert odds to implied probabilities:
+ 
+- Decimal odds O → q = 1 / O
+- American and fractional odds can be converted to decimal first (see next section), then q = 1 / O
+
+- Compute the overround (vig factor): R = Σ qi (will be &gt; 1 for priced markets).
+- Remove the vig proportionally: fair probability pi = qi / R. These now sum to 1.000.
+Convert back to fair odds:
+ 
+- Fair decimal Oi,fair = 1 / pi (equivalently Oi,fair = R × Oi)
+- Convert decimal to American or fractional if needed
+<table><thead><tr><th>Outcome</th><th>Bookmaker decimal</th><th>Implied prob q<sub>i</sub></th><th>Overround R</th><th>Fair prob p<sub>i</sub></th><th>Fair decimal</th><th>Fair American</th><th>Fair fractional</th></tr></thead><tbody><tr><td>Team A</td><td>1.91</td><td>0.523560</td><td>1.047120</td><td>0.500000</td><td>2.000000</td><td>+100</td><td>1/1</td></tr><tr><td>Team B</td><td>1.91</td><td>0.523560</td><td>1.047120</td><td>0.500000</td><td>2.000000</td><td>+100</td><td>1/1</td></tr></tbody></table>
+
+Note: Values are rounded to 6 decimal places where shown.
+
+### Decimal, American, or fractional: which formats are supported?
+
+All three are supported. Calculations are performed in decimal for numerical stability, with lossless conversion in and out of American and fractional formats.
+
+- Decimal (Europe/UK standard): stake included (e.g., 2.50 returns £2.50 per £1 staked).
+- American (+/−): positive shows profit on £100 (or $100) stake; negative shows stake needed to win £100.
+- Fractional (UK): profit:stake ratio (e.g., 3/2 returns £1.50 profit per £1 stake).
+- Implied probability: q = 1 / decimal.
+<table><thead><tr><th>From</th><th>To</th><th>Condition</th><th>Formula</th><th>Notes</th></tr></thead><tbody><tr><td>Decimal O</td><td>Implied prob q</td><td>O &gt; 1</td><td>q = 1 / O</td><td>Stake included in O</td></tr><tr><td>American A</td><td>Decimal O</td><td>A &gt; 0</td><td>O = 1 + A / 100</td><td>e.g., +150 → 2.50</td></tr><tr><td>American A</td><td>Decimal O</td><td>A &lt; 0</td><td>O = 1 + 100 / |A|</td><td>e.g., −125 → 1.80</td></tr><tr><td>Fractional N/D</td><td>Decimal O</td><td>D &gt; 0</td><td>O = 1 + N / D</td><td>e.g., 3/2 → 2.50</td></tr></tbody></table>
+
+
+<table><thead><tr><th>Decimal</th><th>American</th><th>Fractional</th><th>Implied prob</th></tr></thead><tbody><tr><td>1.80</td><td>−125</td><td>4/5</td><td>0.555556</td></tr><tr><td>2.00</td><td>+100</td><td>1/1</td><td>0.500000</td></tr><tr><td>2.50</td><td>+150</td><td>3/2</td><td>0.400000</td></tr><tr><td>3.00</td><td>+200</td><td>2/1</td><td>0.333333</td></tr></tbody></table>
+
+### How are 3‑way markets (1X2) handled?
+
+For 3‑way markets (e.g., football 1X2: Home/Draw/Away), apply the same proportional normalisation to all three outcomes. Each selection’s implied probability is scaled by the total overround so the fair probabilities sum to exactly 1. Then convert back to fair odds.
+
+- Convert each price to implied probability: qH = 1/OH, qD = 1/OD, qA = 1/OA.
+- Compute overround: R = qH + qD + qA.
+- Fair probabilities: pi = qi / R for i ∈ {H, D, A}.
+- Fair decimal odds: Oi,fair = 1 / pi = R × Oi.
+<table><thead><tr><th>Outcome</th><th>Bookmaker decimal</th><th>Implied prob q<sub>i</sub></th><th>Overround R</th><th>Fair prob p<sub>i</sub></th><th>Fair decimal</th></tr></thead><tbody><tr><td>Home (1)</td><td>2.40</td><td>0.416667</td><td>1.051747</td><td>0.396166</td><td>2.524194</td></tr><tr><td>Draw (X)</td><td>3.20</td><td>0.312500</td><td>1.051747</td><td>0.297125</td><td>3.365591</td></tr><tr><td>Away (2)</td><td>3.10</td><td>0.322581</td><td>1.051747</td><td>0.306709</td><td>3.260417</td></tr></tbody></table>
+
+Note: R = 1/2.40 + 1/3.20 + 1/3.10 = 1565/1488 ≈ 1.051747. Fair probabilities are pi = qi / R and fair decimal odds are Oi,fair = R × Oi. Values shown are rounded to 6 decimals.
+
+## When should UK bettors use a no‑vig calculator?
+
+UK bettors should use a no‑vig calculator whenever they need a clean, margin‑free estimate of true probabilities and fair odds to compare prices, spot value, and size stakes responsibly. This is especially useful in markets where the sportsbook overround is large or unevenly distributed (props, outrights, niche leagues), in three‑way 1X2 football markets, and when benchmarking soft‑book prices against exchange quotes (after accounting for commission).
+
+### Which markets benefit most from removing the vig?
+
+No‑vig pricing is valuable anywhere the posted prices embed material margin or where mis‑balancing between selections hides true probabilities. Removing the vig exposes the underlying estimate of each outcome’s likelihood, sharpening comparisons across bookmakers and against exchanges.
+
+- Three‑way football (1X2): Overround is applied across three selections, so de‑vigging can significantly shift each leg’s probability and fair price.
+- Outrights and futures (league winners, top scorer): These often carry higher total margin and uneven tails; no‑vig helps avoid paying inflated prices for longshots.
+- Player props and same‑game builders: Margins are typically higher and can be asymmetric; stripping the vig stabilises comparisons across correlated markets.
+- In‑play micro‑markets: Rapidly updating prices can accumulate extra margin; normalising helps detect stale or outlier lines.
+- Niche leagues and lower‑liquidity events: Thinner markets usually have bigger overrounds; de‑vigging is a quick way to sanity‑check value before placing a bet.
+- Asian handicaps and totals: Even where pricing is sharp, removing a modest two‑way margin clarifies whether a quoted line actually clears fair price.
+- Exchange comparisons: Convert exchange prices to decimal and adjust for commission; then compare to the de‑vig fair line from a sportsbook to decide the better execution venue.
+
+### Does no‑vig pricing help with bankroll and ROI decisions?
+
+Yes. Once you have a margin‑free probability p for an outcome, you can translate any offered odds O into expected value (EV), return on investment (ROI), and suggested stake using Kelly sizing. This turns subjective “value” into concrete, bankroll‑aware numbers.
+
+- Compute EV and ROI per £1 stake: EV = p × O − 1 (ROI equals EV as a percentage).
+- Kelly fraction for decimal odds: Let b = O − 1. Full‑Kelly stake fraction f* = (b × p − (1 − p)) / b. If f* ≤ 0, skip the bet; many bettors use half‑Kelly for risk control.
+- Decision rule: If O &gt; 1/p (i.e., offered odds exceed fair odds), the edge is positive; otherwise it’s negative.
+<table><thead><tr><th>Scenario</th><th>Market</th><th>Fair probability p (from no‑vig)</th><th>Fair decimal 1/p</th><th>Offered odds O</th><th>ROI = p×O − 1</th><th>Kelly fraction f*</th><th>Action</th></tr></thead><tbody><tr><td>A</td><td>Two‑way line (baseline 1.91/1.91 → p = 0.50)</td><td>0.500000</td><td>2.000000</td><td>1.95</td><td>−0.0250 (−2.50%)</td><td>≤ 0 (skip)</td><td>No bet</td></tr><tr><td>B</td><td>Two‑way line (same p = 0.50)</td><td>0.500000</td><td>2.000000</td><td>2.05</td><td>+0.0250 (+2.50%)</td><td>0.02381 (2.381%)</td><td>Bet small (e.g., half‑Kelly 1.19%)</td></tr><tr><td>C</td><td>Football 1X2 (Home) with p = 0.396166</td><td>0.396166</td><td>2.524194</td><td>2.60</td><td>+0.03003 (+3.003%)</td><td>0.01877 (1.877%)</td><td>Bet small‑to‑moderate</td></tr></tbody></table>
+
+Interpretation: Scenario A’s offered price is below fair and should be passed. Scenarios B and C exceed fair odds and show positive ROI; Kelly sizing converts that edge into a disciplined stake size relative to bankroll.
+
+### What mistakes should beginners avoid when de‑vigorishing?
+
+Most errors come from incorrect conversions, using stale or mismatched prices, or applying fair probabilities where model assumptions do not hold. Avoid the following to keep your estimates credible and actionable.
+
+- Mixing formats incorrectly: Always convert American or fractional odds to decimal before computing implied probabilities; watch the sign on negative American prices.
+- Using different books for the same market when deriving p: No‑vig fair p should be extracted from one coherent set of lines; mixing sources can bake in arbitrage and distort p.
+- Ignoring exchange commission: Subtract commission from exchange prices before comparing to de‑vig sportsbook lines; otherwise you will overstate the exchange’s value.
+- Rounding too early: Keep at least 5–6 decimal places during calculations; round only for display to avoid edge flip‑flops near breakeven.
+- Applying no‑vig p to correlated legs: Fair prices from one line do not automatically transfer to builder/parlay legs with correlation; use models that account for correlation.
+- Misreading 1X2 vs Asian lines: Draw‑no‑bet and Asian handicaps handle pushes differently; ensure you use the correct market structure when converting to probabilities.
+- Stale in‑play snapshots: Markets move quickly; re‑compute fair p from the latest lines before deciding.
+- Over‑staking on small edges: Even positive‑EV bets can bust a bankroll if stakes exceed Kelly (or your chosen fraction). Consider half‑Kelly or fixed‑unit caps.
+- For horse racing, forgetting deductions: UK Rule 4 deductions and dead‑heats change effective payout; adjust odds before de‑vigging when applicable.
+- Confusing ROI with hit rate: A higher fair probability does not guarantee profit if the offered price is below fair; edge depends on both p and O.
+
+## Why choose NoVigCalc: fast, precise, 3‑way support
+
+NoVigCalc is built around transparent maths, deterministic rounding, and full support for 2‑way and 3‑way markets. It converts odds between decimal, American, and fractional formats, removes the overround using proportional normalisation, and returns fair probabilities and odds you can reproduce exactly from the same inputs. The workflow is optimised for UK bettors who compare soft‑book lines with exchange prices and need consistent outputs they can audit.
+
+### What makes our fair odds engine accurate and reproducible?
+
+Accuracy comes from using a single, documented de‑vig method; reproducibility comes from strict input handling and fixed rounding/display rules. Our engine is designed so two users entering the same prices obtain the same fair odds, to six decimal places in probability terms.
+
+- Single method, clearly documented: Proportional normalisation of implied probabilities qi = 1/Oi, with fair pi = qi/Σq and fair decimal Oi,fair = 1/pi.
+- Deterministic conversions: All American and fractional inputs are first converted to decimal (A&gt;0 → 1 + A/100; A&lt;0 → 1 + 100/|A|; N/D → 1 + N/D) before computation.
+- Precision policy: Internal calculations at double‑precision (64‑bit) with probabilities shown to 6 dp and odds to 6 dp by default; rounding occurs only at display, not mid‑calculation.
+- Input validation: Rejects decimals ≤ 1, non‑numeric, or negative denominators; flags obviously inconsistent entries (e.g., zero or NaN).
+- 3‑way parity checks: For 1X2, the engine verifies that pHome + pDraw + pAway = 1.000000 ± 0.000001 after de‑vigging.
+- Auditability: Shows intermediate values on demand (implied q, overround Σq, fair p) so users can verify each step.
+- Exchange‑aware comparison mode: Optional commission field lets you net exchange odds before comparing to fair price, avoiding bias.
+
+### App or web: is there a no‑vig calculator app for iOS and Android?
+
+NoVigCalc runs as a fast, mobile‑friendly web app that works on modern iOS and Android browsers. You can add it to your home screen as a progressive web app (PWA) for app‑like access without visiting an app store. The calculator processes inputs locally in your browser; no account is required for core features.
+
+- iOS (Safari): Open the site, tap Share, select “Add to Home Screen.” Launch from the icon for a full‑screen experience.
+- Android (Chrome): Open the site, tap the menu, select “Install app” or “Add to Home screen.”
+- Offline behaviour: The UI loads from cache; calculations require no network once the page is cached. External price fetching (if used) requires connectivity.
+- Privacy: No mandatory login for the calculator; optional settings (precision, display format) can be saved in local storage on your device.
+
+### How does NoVigCalc compare to OddsJam, Unabated, and TopendSports?
+
+OddsJam and Unabated offer broader betting analytics platforms that include a no‑vig/fair‑odds calculator among many tools. TopendSports is an educational sports site with betting‑math resources and calculators. The table below highlights high‑level, factual differences relevant to a user who primarily needs de‑vigging and format conversions.
+<table><thead><tr><th>Platform</th><th>Access model (calculator)</th><th>Primary focus</th><th>Odds formats covered</th><th>Multi‑way market handling</th><th>Link</th></tr></thead><tbody><tr><td>NoVigCalc</td><td>Web app; core calculator accessible without account</td><td>No‑vig fair odds, conversions, 2‑way and 3‑way support</td><td>Decimal, American, Fractional</td><td>Designed for 2‑way and 3‑way (1X2) via proportional normalisation</td><td><a href="https://novigcalc.example">https://novigcalc.example</a></td></tr><tr><td>OddsJam</td><td>Public calculators available; advanced tools via subscription</td><td>Line shopping, market screens, educational calculators</td><td>Decimal, American, Fractional (via conversion utilities)</td><td>Calculators address common 2‑way; multi‑way support varies by tool</td><td><a href="https://oddsjam.com">https://oddsjam.com</a></td></tr><tr><td>Unabated</td><td>Public calculators available; pro features via subscription</td><td>Analytics suite, pricing tools, calculators for bettors</td><td>Decimal, American, Fractional (via conversion utilities)</td><td>Calculators cover 2‑way; additional market types available across tools</td><td><a href="https://unabated.com">https://unabated.com</a></td></tr><tr><td>TopendSports</td><td>Free educational content and calculators</td><td>Sports science and betting‑math resources</td><td>Decimal, American, Fractional (via conversion tables/tools)</td><td>Primarily educational; multi‑way handling may require manual steps</td><td><a href="https://www.topendsports.com">https://www.topendsports.com</a></td></tr></tbody></table>
+
+Takeaway: If you need a focused, transparent de‑vig calculator with robust 3‑way handling and deterministic rounding, NoVigCalc provides a fast web workflow. If you are looking for broader market screening, arbitrage discovery, or subscription analytics, platforms like [OddsJam](https://oddsjam.com) and [Unabated](https://unabated.com) provide extensive toolsets. For learning the underlying maths and checking conversions, [TopendSports](https://www.topendsports.com) offers accessible references.
+
+## How did we go from overround to true price?
+
+Bookmakers publish prices that embed an overround (also called vigorish or margin), meaning the implied probabilities of all selections sum to more than 100%. Moving from “priced with margin” to “true price” requires converting odds to implied probabilities, identifying the total overround, and normalising proportions so they sum to exactly 100%. This shift makes comparisons objective, supports bankroll sizing, and prevents paying hidden margin—especially in 3‑way football markets and low‑liquidity events common in UK betting.
+
+### What is the bookmaker overround and why does it exist?
+
+The overround is the sum of implied probabilities from a set of quoted odds; if it exceeds 1 (or 100%), the difference is the margin the bookmaker expects to retain over time. It exists to cover operating costs, taxes/levies, risk management (imbalanced books, price moves), and to provide profit. Overround is applied to 2‑way markets (e.g., tennis match winner) and 3‑way markets (football 1X2), and typically grows as liquidity falls or selections proliferate (props, outrights).
+
+- Definition: Overround R = Σ(1/Oi) for decimal odds Oi. Margin = R − 1.
+- Purpose: Covers costs, cushions exposure to lopsided staking, funds offers, and yields profit.
+- Effects: Inflates shorter prices slightly and longshots more materially; three‑way markets often show higher R than two‑way lines.
+<table><thead><tr><th>Market example</th><th>Posted decimal odds</th><th>Implied probabilities q<sub>i</sub></th><th>Overround R</th><th>Margin (R − 1)</th><th>Margin %</th><th>Notes</th></tr></thead><tbody><tr><td>Two‑way (balanced)</td><td>1.91 / 1.91</td><td>0.523560, 0.523560</td><td>1.047120</td><td>0.047120</td><td>4.712%</td><td>Typical “−110/−110” equivalent in decimal</td></tr><tr><td>Football 1X2</td><td>2.40 / 3.20 / 3.10</td><td>0.416667, 0.312500, 0.322581</td><td>1.051747</td><td>0.051747</td><td>5.1747%</td><td>3‑way markets often carry higher overround</td></tr></tbody></table>
+
+Interpretation: In both examples, Σq exceeds 1. After no‑vig normalisation, the probabilities are scaled to sum to 1, and fair odds rise accordingly (e.g., 1.91 becomes 2.00 when de‑vigged in a balanced two‑way line).
+
+### Which “dead‑end” methods failed to estimate fair odds?
+
+Several ad‑hoc approaches have been tried historically but do not produce unbiased, reproducible fair prices. They either violate probability axioms, distort relative prices, or depend on arbitrary parameters.
+
+- Flat odds haircut: Subtracting a fixed 0.05 from every decimal price. This breaks proportionality and can create nonsensical odds ≤ 1 for short favourites.
+- Equal vig split by count: Dividing the total margin equally across selections regardless of their starting probabilities, overstating longshots and understating favourites.
+- Linear shift in probabilities: Subtracting the same constant from each implied probability qi, which can drive some probabilities negative and fails to preserve ratios.
+- Ignoring the draw in 1X2: Re‑scaling only Home and Away while leaving Draw unchanged breaks additivity (pH + pD + pA ≠ 1).
+- Mixing sources: Combining prices from different books to compute a single “fair” vector bakes in cross‑book discrepancies and can create artificial arbitrage signals.
+- “Target margin” back‑solve without constraints: Optimising odds to hit a margin target without preserving original relative weights leads to unstable, model‑dependent outputs.
+
+### How did modern tools improve on manual spreadsheets?
+
+Modern calculators automate conversions, normalisation, and validation, removing common spreadsheet pitfalls (formula drift, rounding mid‑calculation, and copy‑paste errors). They also expose intermediate steps for audit and integrate context like exchange commission.
+
+- Deterministic pipeline: Convert to decimal, compute q, sum R, normalise to p, convert back—always in the same order, with late rounding only for display.
+- Multi‑format I/O: Seamless American and fractional conversions prevent sign and ratio mistakes common in manual sheets.
+- 3‑way and N‑way safe: Enforces Σp = 1 within a tight tolerance and alerts on invalid inputs (decimals ≤ 1, NaN, negative denominators).
+- Commission‑aware comparisons: Net exchange odds for commission before comparing to sportsbook fair prices, avoiding overstated value.
+- Batch and reproducibility: Process multiple markets consistently, time‑stamp results, and lock calculation rules so repeated runs match.
+- Error handling and auditing: Input validation, intermediate q/R display, and exportable logs reduce silent errors that creep into spreadsheets.
+- Mobile/PWA usability: Instant calculations on device with consistent rounding across platforms, eliminating file‑version divergence.
+
+## The other side of the coin: is no‑vig always the right move?
+
+No‑vig prices are useful, but they are not a guarantee of profit or “truth.” De‑vigging assumes the bookmaker’s margin is spread proportionally across selections and that the posted prices are unbiased. In reality, books shade lines (e.g., towards popular teams), apply asymmetric margins, and move with liquidity. The practical decision is not “Is the vig removed?” but “Given frictions, limits, and market quality, is this the best execution for my bankroll and risk?” For safer gambling guidance in the UK, see [https://www.begambleaware.org](https://www.begambleaware.org).
+
+### What is the strongest argument against stripping the vig?
+
+The strongest critique is that no‑vig probabilities derived from a single bookmaker are not ground truth; they are that bookmaker’s opinion with its margin mathematically removed. If the original prices are shaded or biased, the de‑vig output inherits those biases and can mislead decisions.
+
+- Book bias persists: Removing margin does not correct favourite/underdog shading, home‑team bias, or promo‑driven distortions.
+- Assumption risk: Proportional normalisation assumes the vig is spread in proportion to implied probabilities; this is a modelling choice, not a fact.
+- Information quality: An exchange or multi‑book consensus (properly combined and commission‑adjusted) often reflects more liquidity and information than a single book.
+- Correlated structures: For props or builder legs, fair prices depend on correlation structure; de‑vigging independent legs ignores joint dependence.
+- Execution reality: You earn returns at executed odds, not at fair odds. If the best executable price deviates due to limits or slippage, de‑vig math alone cannot fix that.
+
+### When might market frictions, limits, or boosts outweigh fair pricing?
+
+Fair pricing is one input. Execution frictions, limits, commission, and promotions can dominate the decision. In the UK, exchanges charge commission on net winnings; sportsbooks may cap stakes or offer price boosts. These factors can flip EV from negative to positive—or erase a small edge.
+<table><thead><tr><th>Scenario</th><th>Assumptions</th><th>Effective decimal odds</th><th>Fair prob p</th><th>EV = p×O<sub>eff</sub> − 1</th><th>Stake/limit impact</th><th>Takeaway</th></tr></thead><tbody><tr><td>Odds boost</td><td>Boosted to 2.20 from a fair 2.00</td><td>2.2000</td><td>0.5000</td><td>+0.1000 (+10.00%)</td><td>None</td><td>Promo creates clear positive edge versus fair 2.00</td></tr><tr><td>Exchange with 2% commission</td><td>Back at 2.08; commission on winnings 2%</td><td>2.0584 (1 + (2.08−1)×0.98)</td><td>0.5000</td><td>+0.0292 (+2.92%)</td><td>Depth dependent</td><td>Commission‑adjusted exchange can still beat fair</td></tr><tr><td>Sportsbook limit</td><td>Offered 2.02 but max stake £50</td><td>2.0200</td><td>0.5000</td><td>+0.0100 (+1.00%)</td><td>Max EV ≈ £0.50 per bet</td><td>Edge exists but limited profit may not justify effort</td></tr><tr><td>Profit‑boost token</td><td>Base 1.95, profit +20% → O<sub>eff</sub>=1+(0.95×1.20)=2.14</td><td>2.1400</td><td>0.5000</td><td>+0.0700 (+7.00%)</td><td>Token scarcity</td><td>Boost can outperform small price differences</td></tr><tr><td>Slippage on exchange</td><td>Shown 2.10, filled avg 2.02; 2% commission</td><td>1.9996 (1+(1.02×0.98))</td><td>0.5000</td><td>−0.0002 (−0.02%)</td><td>Depth/latency</td><td>Slippage and fees can erase a marginal edge</td></tr></tbody></table>
+
+Interpretation: Promos and boosts can dominate small pricing edges; exchange commission and slippage can neutralise them. Always compute effective odds after all frictions before deciding where to execute.
+
+### How should you balance model edges vs. closing‑line efficiency?
+
+Use no‑vig probabilities as a baseline, but validate your edge against market quality and your model’s out‑of‑sample performance. Treat the closing line (from a liquid market or major exchange) as a calibration reference, not an oracle.
+
+- Define your fair p and threshold: Only act when offered O exceeds 1/p by a margin that covers frictions (e.g., +1–2% on major two‑way markets; higher on props/niche).
+- Track closing‑line value (CLV): Compare your entry price to the closing price consistently (e.g., CLV% = Obet/Oclose − 1 or via log‑odds). Persistently negative CLV signals an overfit or lagging model.
+- Use risk‑scaled staking: Compute full‑Kelly f* = (p×(O−1) − (1−p)) / (O−1), then apply a confidence factor c ∈ (0,1] based on model validation (e.g., half‑Kelly or lower when CLV variance is high).
+- Score calibration, not just ROI: Track Brier score and log loss so a lucky run does not mask mis‑calibration. A well‑calibrated model should align predicted frequencies with outcomes over time.
+- Segment by market type: Maintain separate CLV/ROI stats for high‑liquidity two‑ways, 1X2, and props. Thresholds and variance differ materially across segments.
+- Reconcile to execution: Prefer venues that maximise effective odds net of commission and slippage. If a model edge does not survive to closing prices or execution realities, pass.
+- Governance and duty of care: Set stop‑losses and daily exposure caps; UK bettors can consult the regulator for consumer protections at [https://www.gamblingcommission.gov.uk](https://www.gamblingcommission.gov.uk).
+
+## Frequently Asked Questions
+
+### How do I compute no‑vig “consensus” fair odds from multiple sportsbooks?
+
+Convert each book’s prices to implied probabilities, normalise within each book so they sum to 1, then average those normalised probabilities across books and invert to odds. A trimmed mean or median reduces outlier impact; the formula is p_i,consensus = average_b(q_{i,b}/R_b) and O_i,fair = 1/p_i,consensus.
+This approach removes each bookmaker’s own overround R_b before combining opinions, preventing a high‑margin book from skewing the result. Example: if three books quote implied probabilities for Team A of 0.5236, 0.5310, and 0.5280 with overrounds 1.047, 1.060, and 1.055, their normalised p_A are 0.5000, 0.5010, and 0.5005; the average p_A ≈ 0.5005 gives fair decimal 1/p_A ≈ 1.998, a difference of 0.10% versus 2.000. When total overrounds are modest (≤6%), using mean vs median typically shifts p_i by less than 0.3 percentage points in balanced two‑way markets.
+
+### Can fair odds ever be lower than the sportsbook’s posted odds?
+
+If you de‑vig a single coherent market with overround R > 1 using proportional normalisation, fair decimal odds are O_fair = R × O and are therefore always higher than the posted odds. Fair odds are lower only if the combined implied probabilities across your inputs sum to less than 1 (i.e., cross‑book negative vig/arbitrage).
+Mathematically, with decimal inputs O_i from one book, q_i = 1/O_i and R = Σq_i > 1, so p_i = q_i/R and O_i,fair = 1/p_i = R × O_i > O_i. If you aggregate “best prices” across books and find Σ(1/O_i) 
+
+### How do I compare exchange prices to fair odds after commission?
+
+Net the exchange odds for commission, then compute ROI versus your fair probability: O_eff = 1 + (O − 1) × (1 − c) and ROI = p × O_eff − 1. Use this O_eff when deciding between exchange and sportsbook execution.
+Example: Exchange back odds O = 3.50 with 5% commission (c = 0.05) yield O_eff = 1 + 2.50 × 0.95 = 3.375. If your no‑vig fair probability is p = 0.33, ROI = 0.33 × 3.375 − 1 = +0.11375, i.e., +11.375%. If a sportsbook offers 3.30 with no commission, ROI_sportsbook = 0.33 × 3.30 − 1 = +8.9%, so the exchange provides a larger edge after fees.
+
+### How do I derive Draw No Bet (DNB) and Double Chance fair odds from 1X2 probabilities?
+
+From de‑vig 1X2 probabilities p_H, p_D, p_A: DNB Home decimal = (1 − p_D)/p_H, DNB Away decimal = (1 − p_D)/p_A, and Double Chance fair decimals are 1/(p_H + p_D), 1/(p_D + p_A), and 1/(p_H + p_A).
+Numerical example using p_H = 0.396166, p_D = 0.297125, p_A = 0.306709 gives DNB Home ≈ (1 − 0.297125)/0.396166 = 1.7737, DNB Away ≈ (1 − 0.297125)/0.306709 = 2.2927, Double Chance H or D ≈ 1/(0.693291) = 1.4429, D or A ≈ 1/(0.603834) = 1.6555, H or A ≈ 1/(0.702875) = 1.4234. These transformations retain internal consistency with the original 1X2 fair probabilities.
+
+### How should I treat Asian Handicap quarter‑lines (+0.25/−0.25) with no‑vig probabilities?
+
+Quarter‑lines split your stake across two adjacent handicaps, so you must price each leg’s win/lose/push probabilities and combine them; 1X2 probabilities alone are insufficient to recover those without an additional model or market inputs. Once you have the leg probabilities, compute EV leg‑wise and average across the split stake.
+For +0.25 on the home side, half the stake goes to 0 (DNB‑style with push probability equal to draw on that leg) and half to +0.5 (no push). If the leg odds are O_0 and O_+0.5 with win, push, and lose probabilities (p_win0, p_push0, p_lose0) and (p_win05, p_lose05), then EV per £1 is 0.5 × [p_win0 × (O_0 − 1) + p_push0 × 0 − p_lose0] + 0.5 × [p_win05 × (O_+0.5 − 1) − p_lose05]. These probabilities can be inferred from the live AH market or from a goals model; they cannot be exactly deduced from 1X2 alone.
+
+### How wrong is proportional de‑vigging if the bookmaker loads the margin unevenly?
+
+With a 5% overround, switching from proportional to an equal per‑selection margin split typically shifts probabilities by well under 1 percentage point in two‑way markets; a worked example shows a 0.36 p.p. difference on the favourite. This quantifies the model risk from the vig‑allocation assumption.
+Example: Suppose q_fav = 0.600, q_dog = 0.450 so R = 1.050. Proportional normalisation gives p_fav = 0.600/1.050 = 0.571429. An equal split of the 5% margin subtracts λ = 0.025 from each q, yielding p_fav,additive = 0.600 − 0.025 = 0.575. The gap is 0.003571 (0.3571 p.p.). Such differences grow as overround increases or when selections are very imbalanced, so always sanity‑check small edges against plausible allocation error.
+
+### What overround levels are typical in UK markets and how do I sanity‑check them?
+
+A balanced two‑way at −110/−110 (decimal 1.909/1.909) carries 4.76% overround, while a representative Premier League 1X2 like 2.40/3.20/3.10 carries 5.1747%; props and niche events often exceed these. Sanity‑check by summing implied probabilities and comparing to 100%: Σ(1/O_i) − 1 is the margin.
+Concrete checks: for 1.909/1.909, Σq = 0.52381 + 0.52381 = 1.04762 (margin 4.762%). For 2.40/3.20/3.10, Σq = 0.416667 + 0.312500 + 0.322581 = 1.051747 (margin 5.1747%). If your computed Σq deviates by more than 1–2 percentage points from category norms, re‑verify conversions, market structure, and whether prices are stale or boosted.
+
+### How much precision do I need to keep small edges from flipping due to rounding?
+
+Maintain at least six decimal places in probabilities and odds during calculation; rounding early can flip a 0.05–0.10% edge to zero. Display rounding should occur only after all computations.
+Illustration: With p = 0.5003 and O = 2.00, ROI = 2 × 0.5003 − 1 = +0.0006 (+0.06%). If you round p to 0.5000 too early, ROI becomes 0%. For O = 3.00 and p = 0.3402, ROI = 0.0206 (+2.06%); rounding p to 0.340 turns ROI into 0.0200 (+2.00%), a 2.9% relative reduction of the edge. Keeping six decimals avoids such avoidable distortions.
+
+### How do I detect a risk‑free arbitrage using implied probabilities?
+
+Pick the best available price for each mutually exclusive outcome across books, convert to implied probabilities, and sum them; if Σ(1/O_best) 
+
+### Are UK betting winnings taxed for individuals in 2026?
+
+No; for UK residents, gambling winnings are not subject to income or capital gains tax. Operators, not customers, pay the applicable betting duties and levies.
+HMRC’s long‑standing position is that punters are not taxed on gambling returns, regardless of whether they bet in shops, online sportsbooks, or exchanges. This is not tax advice; consult official HMRC guidance if your circumstances are unusual (for example, if gambling is intertwined with a separate, taxable business activity).
+
+### Does removing the vig guarantee profit or predict outcomes?
+
+No; de‑vigging produces margin‑free probabilities, not forecasts or guarantees. Even with a positive expected value, variance is large relative to typical edges.
+Quantitatively, consider O = 2.05 with p = 0.50 (ROI = +2.5%). The per‑bet standard deviation of returns is about 1.025 units; across 100 equal‑stakes bets, the expected profit is +2.5 units but the standard deviation of the sum is ≈ 10.25 units, so outcomes one standard deviation below expectation are still negative. This is why bankroll controls and fractional Kelly are used, and why execution quality can dominate small theoretical edges.
+
+### What inputs are invalid or unsafe for de‑vigging and why?
+
+You must include every mutually exclusive outcome with decimal odds greater than 1; decimals ≤ 1, missing outcomes, or overlapping selections break probability arithmetic and produce nonsense. If outcomes are correlated, a simple de‑vig will misstate risk.
+Examples: entering only Home and Away while omitting Draw in 1X2 forces Σp ≠ 1 and inflates both sides; decimal 1.00 or 0.00 is invalid because implied probability would be 1 or undefined; pricing multiple horses each‑way as if they were exclusive win outcomes double‑counts. For horse racing, you must first adjust posted odds for Rule 4 deductions or dead‑heats: a 20% Rule 4 on decimal 4.00 yields an effective 3.40 since O_eff = 1 + (O − 1) × 0.80; a two‑way dead‑heat at decimal 10.00 pays as O_eff = 1 + (10 − 1)/2 = 5.50 before place terms.

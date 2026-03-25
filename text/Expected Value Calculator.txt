@@ -1,0 +1,381 @@
+**Title:** Expected Value Calculator for Betting | Official 2026
+
+ **Description:** Free UK betting EV calculator: input odds or probability to get expected value, edge %, ROI and break‑even. Supports decimal/fractional. Official 2026.
+
+# Expected Value Calculator for Betting
+
+Free EV tool for UK bettors. Enter decimal or fractional odds and your true probability (or percentage) to get expected value, edge %, ROI, and break‑even in pounds. Optimised for London time and UK formats.
+
+## What is expected value in betting and how do you calculate it?
+
+Expected value (EV) is the average profit or loss you can expect per bet if the same wager were placed many times under identical conditions. In sports betting, EV combines your estimated true win probability with the market odds to quantify whether a price is favourable. A positive EV indicates long-run profitability; a negative EV indicates you are paying too much for the risk.
+
+### What is the EV formula for a single bet?
+
+For a straight (single) bet with decimal odds, the EV on a profit basis can be written with the following variables:
+
+- s = stake in £
+- d = decimal odds
+- p = your estimated true probability of winning (between 0 and 1)
+
+Net outcomes per bet:
+
+- If the bet wins: net profit = s × (d − 1)
+- If the bet loses: net loss = −s
+
+Expected value (in £):
+
+- EV(£) = p × s × (d − 1) + (1 − p) × (−s) = s × (p × d − 1)
+
+Useful derived metrics:
+
+- EV per £1 staked (EV%) = p × d − 1
+- Break-even probability = 1 ÷ d (the win probability at which EV = 0)
+- Edge in percentage points = p − (1 ÷ d)
+- ROI% on stake = (p × d − 1) × 100%
+
+Notes:
+
+- Using fractional odds a/b, convert to decimal first: d = 1 + a/b, then apply the same formulas.
+- EV calculations assume all-or-nothing settlement (no push). For markets with pushes/voids, include an additional probability term for the push outcome with net profit £0.
+
+### How do you convert decimal, fractional, and moneyline odds to probability?
+
+Odds formats represent the price in different ways, but they all map to an implied probability (the chance required to break even before bookmaker margin adjustments). Convert as follows:
+
+- Decimal (d): implied probability q = 1 ÷ d
+- Fractional (a/b): q = b ÷ (a + b)
+Moneyline (American):
+ 
+- For positive +x: q = 100 ÷ (x + 100)
+- For negative −x: q = x ÷ (x + 100), where x is the absolute value
+
+Example conversions:
+<table><thead><tr><th>Format</th><th>Odds</th><th>Decimal</th><th>Implied Probability</th><th>Explanation</th></tr></thead><tbody><tr><td>Decimal</td><td>2.50</td><td>2.50</td><td>0.40 (40%)</td><td>1 ÷ 2.50 = 0.4</td></tr><tr><td>Fractional</td><td>3/2</td><td>2.50</td><td>0.40 (40%)</td><td>3/2 → 1 + 1.5 = 2.5; 1 ÷ 2.5 = 0.4</td></tr><tr><td>Moneyline</td><td>+150</td><td>2.50</td><td>0.40 (40%)</td><td>100 ÷ (150 + 100) = 0.4</td></tr><tr><td>Moneyline</td><td>-200</td><td>1.50</td><td>0.6667 (66.67%)</td><td>200 ÷ (200 + 100) = 0.6667</td></tr><tr><td>Fractional</td><td>4/5</td><td>1.80</td><td>0.5556 (55.56%)</td><td>4/5 → 1 + 0.8 = 1.8; 1 ÷ 1.8 ≈ 0.5556</td></tr></tbody></table>
+
+Implied probabilities computed from market odds include the bookmaker’s margin when summed across all outcomes in a market; for fair (no-margin) estimates, remove the overround before comparing with your own probabilities.
+
+### Worked example: calculating EV on a Premier League match
+
+The following is an illustrative, fully calculated example using assumed market odds for a Premier League match. Suppose you find a price on Tottenham to win at decimal odds d = 2.40, you plan to stake s = £50, and your model estimates p = 0.46 (46%) for a Tottenham win.
+
+- Implied probability from the odds: q = 1 ÷ 2.40 = 0.4167 (41.67%)
+- Edge (percentage points): p − q = 0.46 − 0.4167 = 0.0433 (4.33 pp)
+- EV% (per £1 staked): p × d − 1 = 0.46 × 2.40 − 1 = 1.104 − 1 = 0.104 (10.4%)
+- Expected profit in £: EV(£) = s × EV% = £50 × 0.104 = £5.20
+- Net profit if the bet wins: s × (d − 1) = £50 × 1.40 = £70.00
+- Net loss if the bet loses: −£50.00
+- Break-even probability: 1 ÷ d = 1 ÷ 2.40 = 0.4167 (41.67%)
+<table><thead><tr><th>Parameter</th><th>Value</th><th>Calculation</th></tr></thead><tbody><tr><td>Market odds (decimal)</td><td>2.40</td><td>Given</td></tr><tr><td>Stake (s)</td><td>£50.00</td><td>Given</td></tr><tr><td>Your win probability (p)</td><td>0.46 (46%)</td><td>Given</td></tr><tr><td>Implied probability (q)</td><td>0.4167 (41.67%)</td><td>1 ÷ 2.40</td></tr><tr><td>Edge (pp)</td><td>+4.33 pp</td><td>p − q = 0.46 − 0.4167</td></tr><tr><td>EV% (per £1)</td><td>+10.40%</td><td>p × d − 1 = 0.46 × 2.40 − 1</td></tr><tr><td>EV(£)</td><td>£5.20</td><td>£50 × 0.104</td></tr><tr><td>Net profit if win</td><td>£70.00</td><td>£50 × (2.40 − 1)</td></tr><tr><td>Net loss if lose</td><td>−£50.00</td><td>Loss of stake</td></tr><tr><td>Break-even probability</td><td>41.67%</td><td>1 ÷ 2.40</td></tr></tbody></table>
+
+Interpretation: Because your estimated win probability (46%) is higher than the break-even probability (41.67%), the bet has positive expected value. Over many similar opportunities, a 10.4% EV suggests an average profit of £10.40 per £100 staked, acknowledging that short-run results will vary due to randomness.
+
+## Expected Value Calculator: how to use it for odds and percentages?
+
+This calculator estimates the expected profit or loss of a single sports bet using your own “true” win probability and the market odds. Enter odds in your preferred format (decimal, fractional, or moneyline), provide your probability as a percentage or a 0–1 value, and input your stake in pounds. The outputs include EV in £, EV% (per £ staked), break-even probability, and edge, helping UK bettors compare prices and size stakes consistently.
+
+### How do you enter odds, true probability, and stake step by step?
+
+The steps below apply to straight (single) bets such as Match Winner, Over/Under, or Both Teams to Score.
+
+Select odds format:
+ 
+- Decimal (UK default): e.g., 2.10
+- Fractional: e.g., 11/10 (equivalent to decimal 2.10)
+- Moneyline (American): e.g., +110 (equivalent to decimal 2.10)
+
+- Enter the market odds exactly as quoted. The calculator converts fractional and moneyline to decimal internally to standardise calculations.
+Choose probability input mode:
+ 
+- Percentage: enter a number from 0 to 100 (e.g., 47 for 47%).
+- Probability: enter a number from 0 to 1 (e.g., 0.47).
+
+ Your “true” probability should come from your model or judgement, not from the odds’ implied probability. For multi-outcome markets (e.g., 1X2), enter the probability for your single selection only.- Enter your stake in £ (pounds and pence). Outputs are rounded to the nearest penny for currency and to two decimal places for percentages unless specified otherwise.
+Review the results:
+ 
+- EV% = p × d − 1 (per £ staked)
+- EV(£) = stake × EV%
+- Break-even probability = 1 ÷ decimal odds
+- Edge (percentage points) = your probability − break-even probability
+
+- Optional: If you are deriving “true” probabilities from the market itself, first remove the bookmaker’s overround outside the tool to avoid bias (see “How to avoid errors”).
+
+### EV percentage vs £ value: what’s the difference?
+
+EV% measures price quality per unit stake and is scale-free, so it is ideal for comparing multiple opportunities regardless of stake size. EV in £ is stake-dependent and shows the average profit or loss for the specific amount you plan to wager. For decision-making, use EV% to rank bets and EV(£) to understand the cash impact at your chosen stake.
+<table><thead><tr><th>Odds (decimal)</th><th>True probability</th><th>Stake (£)</th><th>Break-even probability</th><th>EV%</th><th>EV (£)</th></tr></thead><tbody><tr><td>2.40</td><td>0.46 (46%)</td><td>50.00</td><td>0.4167 (41.67%)</td><td>+10.40%</td><td>+5.20</td></tr><tr><td>1.80</td><td>0.60 (60%)</td><td>100.00</td><td>0.5556 (55.56%)</td><td>+8.00%</td><td>+8.00</td></tr><tr><td>3.20</td><td>0.34 (34%)</td><td>25.00</td><td>0.3125 (31.25%)</td><td>+8.80%</td><td>+2.20</td></tr><tr><td>1.50</td><td>0.60 (60%)</td><td>200.00</td><td>0.6667 (66.67%)</td><td>−10.00%</td><td>−20.00</td></tr><tr><td>2.05</td><td>0.49 (49%)</td><td>75.00</td><td>0.4878 (48.78%)</td><td>+0.45%</td><td>+0.34</td></tr></tbody></table>
+
+Notice how EV% stays the same regardless of stake, while EV(£) scales linearly with the amount wagered. A small positive EV% with a large stake can still produce a meaningful £ edge, whereas a negative EV% will lose money on average at any stake.
+
+### How to avoid errors: vig, rounding, and stake units?
+
+Small input mistakes can flip a bet from positive to negative EV. Use the checks below to keep calculations accurate.
+
+Vig (overround) removal:
+ 
+- Problem: Using implied probabilities straight from bookmaker odds across all outcomes sums to more than 100% because of margin.
+- Fix: If you are extracting probabilities from prices, normalise them to 100% before applying your adjustments. Example for a two-way market with decimal odds d1 and d2: raw q1 = 1/d1, q2 = 1/d2; sum S = q1 + q2; fair p1 = q1/S, p2 = q2/S.
+
+Rounding discipline:
+ 
+- Keep internal calculations at high precision (e.g., 4–6 decimal places for probabilities). Round only for display: currency to the nearest penny, percentages to two decimals.
+- Beware of early rounding when converting fractional or moneyline odds to decimal; carry at least 3–4 decimals on the decimal price.
+
+Stake units and net vs gross:
+ 
+- Ensure the stake you enter is the cash outlay in £. EV(£) here is net of stake on loss and excludes stake from profit reporting (i.e., net profit if win = stake × (decimal − 1)).
+- For exchanges or lay bets, “liability” differs from stake; this calculator assumes a back bet (traditional sportsbook). Do not use lay liability as stake without adapting the formula.
+
+Format hygiene:
+ 
+- Check moneyline sign: +150 ≠ −150. Convert correctly before computing EV.
+- Convert fractional a/b to decimal with d = 1 + a/b (not a ÷ b returns).
+
+Market mechanics:
+ 
+- Account for pushes/voids if applicable by adding a “push” probability with £0 outcome; otherwise EV will be biased.
+- When comparing multiple selections in the same market, remember correlations; EVs are computed per bet and do not enforce portfolio constraints.
+
+## How do you turn bookmaker odds into true probabilities and edge?
+
+Bookmaker odds embed a margin (overround), so the implied probabilities from prices sum to more than 100%. To assess value correctly, you should remove the margin to get fair (no-vig) probabilities, compare them with your model’s “true” probabilities, and compute edge and ROI. This section shows how to de-vig odds, how data and models improve estimates, and how break-even probability and ROI guide decisions.
+
+### How to remove the overround to get fair odds
+
+De-vigging converts market odds into a set of fair probabilities that sum to 100%. The most common and transparent method is proportional normalisation of implied probabilities.
+
+- Convert each outcome’s odds di to implied probability qi = 1 ÷ di.
+- Compute the overround S = Σ qi (S will exceed 1 when margin is present).
+- Normalise: fair probability pi = qi ÷ S.
+- Convert back to fair odds if needed: di,fair = 1 ÷ pi.
+
+Example (football 1X2 market):
+<table><thead><tr><th>Outcome</th><th>Market Odds (d)</th><th>Implied q = 1/d</th><th>Overround S</th><th>Fair p = q/S</th><th>Fair Odds = 1/p</th></tr></thead><tbody><tr><td>Home</td><td>2.30</td><td>0.4348</td><td>1.0515</td><td>0.4136</td><td>2.417</td></tr><tr><td>Draw</td><td>3.40</td><td>0.2941</td><td>1.0515</td><td>0.2799</td><td>3.572</td></tr><tr><td>Away</td><td>3.10</td><td>0.3226</td><td>1.0515</td><td>0.3065</td><td>3.264</td></tr></tbody></table>
+
+Checks and tips:
+
+- The fair probabilities pi sum to 1.0000 (allowing for rounding).
+- Two-way symmetric example: 1.91/1.91 implies q = 0.52356 each; S = 1.04712; fair p = 0.5; fair odds = 2.00/2.00.
+- Alternative de-vig methods exist (e.g., Shin model) to account for insider trading; proportional normalisation is sufficient for most pricing comparisons and is easy to audit.
+
+### How can data and models improve your probability estimates?
+
+Accurate “true” probabilities drive EV. Robust estimates come from data-driven models, careful validation, and calibration to ensure predicted probabilities match observed frequencies.
+
+Foundational models:
+ 
+- Poisson and Dixon–Coles for football goals and 1X2 probabilities (with correlation adjustment for low scores).
+- Bradley–Terry/Elo-style ratings for head-to-head strengths across sports.
+- Logistic regression or gradient boosting using features like expected goals (xG), shots, rest days, travel distance, injuries, and weather.
+
+Market-aware priors and updating:
+ 
+- Use closing odds (after de-vig) as a prior and blend with your model via Bayesian updating to stabilise early-season estimates.
+- Track Closing Line Value (CLV) as a proxy for forecast quality.
+
+Calibration and reliability:
+ 
+- Assess Brier score and log loss; inspect reliability diagrams to align predicted probabilities with outcomes.
+- Apply isotonic regression or Platt scaling to fix miscalibration.
+
+Validation hygiene:
+ 
+- Use time-series splits (rolling windows) rather than random k-fold to respect temporal structure.
+- Guard against leakage (e.g., using post-match statistics) and overfitting (regularisation, early stopping).
+
+Practical enhancements:
+ 
+- Account for lineup news, schedule congestion, travel, and refereeing tendencies where data allow.
+- Ensemble multiple models; diversified signals tend to improve out-of-sample performance.
+
+### What are break-even probability and ROI?
+
+Break-even probability and ROI translate prices and beliefs into decision metrics. They are closely related but answer different questions: “What hit rate do I need to not lose money?” versus “What is my expected return per pound?”
+
+Break-even probability (qBE):
+ 
+- Definition: the win probability that makes EV = 0 at the given odds.
+- Formula: qBE = 1 ÷ d (using decimal odds).
+- Example: d = 2.40 → qBE = 41.67%.
+
+Return on Investment (ROI%):
+ 
+- Definition: expected profit per £1 staked, expressed as a percentage.
+- Formula: ROI% = (ptrue × d − 1) × 100%.
+- Example: ptrue = 0.46, d = 2.40 → ROI% = (0.46 × 2.40 − 1) × 100% = 10.40%.
+
+Edge (percentage points) and relationships:
+ 
+- Edge (pp) = ptrue − qBE.
+- Positive ROI% ⇔ ptrue > qBE. Negative ROI% ⇔ ptrueBE.
+- EV in £ for stake s: EV(£) = s × (ROI% ÷ 100).
+
+Usage tips:
+ 
+- Rank opportunities by ROI% to compare prices across markets and sports.
+- Use EV(£) to understand cash impact at your chosen stake size.
+- Always compute qBE and ROI% using de-vigged or quoted odds consistently with your probability source.
+
+## The other side of the coin: When does EV fail in real betting?
+
+Positive expected value is a long-run concept. In day-to-day betting, bankroll swings, stale prices, and hidden correlations can turn mathematically “good” bets into poor real-world outcomes. Understanding variance, market dynamics, and dependency between bets helps you apply EV responsibly and protect capital.
+
+### Why can variance and small samples wreck a bankroll?
+
+Even with positive EV, outcomes are noisy. A favourable price does not guarantee near-term profit because the payoff distribution is skewed and high-variance. The law of large numbers stabilises results only after many independent bets. With small samples, losing streaks are common and can trigger drawdowns or even ruin if stakes are too large.
+
+- Skewed payoffs: For a back bet at decimal odds d, the net result is +s×(d−1) with probability p and −s otherwise; variance can dwarf the average edge.
+- Slow convergence: Standard deviation of the total profit scales with √N, while expected profit scales with N; early results are dominated by randomness.
+- Bankroll risk: Overstaking (relative to edge and variance) amplifies drawdown risk; fractional Kelly or fixed-percentage staking reduces volatility.
+<table><thead><tr><th>Example (p = 0.46, d = 2.40, stake s = £50)</th><th>Per bet</th><th>After 10 bets</th><th>After 100 bets</th><th>After 1,000 bets</th></tr></thead><tbody><tr><td>Expected profit (£)</td><td>+5.20</td><td>+52.00</td><td>+520.00</td><td>+5,200.00</td></tr><tr><td>Std dev of profit (£)</td><td>59.81</td><td>189.13</td><td>598.08</td><td>1,891.25</td></tr></tbody></table>
+
+Interpretation: The per-bet EV is +£5.20, but the standard deviation per bet is ~£59.81. After 100 bets you “expect” +£520, yet a one-standard-deviation swing is about ±£598. Short-run outcomes can be negative despite a genuine edge, so staking and bankroll management are critical.
+
+### How do market moves and stale prices distort EV?
+
+EV must be computed at the price you can actually obtain. If you calculate EV from an outdated line or a sharp book’s price that is no longer available, your estimate is illusory. Markets incorporate new information; when odds move, the implied value typically compresses.
+
+Price drift example:
+ 
+- Model probability p = 0.42.
+- Opening odds 2.60 → EV% = p×d − 1 = 0.42×2.60 − 1 = +9.2% (good).
+- After move to 2.30 → EV% = 0.42×2.30 − 1 = −3.4% (now negative).
+
+- Execution slippage: By the time you submit, limits, delays, or partial fills may lower the average filled price, reducing or eliminating EV.
+- Closing line information: If your bets systematically beat the closing price (after removing vig), that is evidence your EV was real; failing to do so suggests stale or mismeasured value.
+- Cross-book comparison: Always compare like-for-like (same rules, payout on pushes, and settlement). Differences in rules can mimic “edge.”
+
+### What are correlation traps and double-counting value?
+
+Assuming independence where it does not exist inflates EV. Correlations appear both between bet legs (e.g., same-game parlays) and inside your modelling process (reusing the same signal multiple times). Avoiding double-counting protects you from overstated edges and unexpected variance.
+
+Same-game correlation:
+ 
+- Example: “Team to win” and “Over total points” are positively correlated; multiplying independent leg probabilities overstates the parlay’s true chance.
+- Fix: Use joint or conditional probabilities, or rely on books’ same-game engines that price correlation—then compare to your joint model, not independent products.
+
+Signal reuse and leakage:
+ 
+- Using market-implied probabilities as features and also comparing predictions to the same market can double-count the same information.
+- Fix: Separate training targets from inputs; use out-of-sample evaluation and remove redundant features.
+
+Portfolio overlap:
+ 
+- Backing multiple outcomes driven by a single narrative (e.g., pace, weather, or lineup news) concentrates risk; simultaneous losses are more likely than the model assumes.
+- Fix: Monitor factor exposure and scenario test; cap correlated positions or diversify across independent markets.
+
+Settlement and rule correlation:
+ 
+- Push/void rules and alternative line holders can induce hidden dependencies across bets placed at different books.
+- Fix: Standardise assumptions before aggregation and compute EV under consistent settlement conventions.
+
+## How did expected value evolve from theory to practical tools?
+
+Expected value (EV) began as a mathematical idea about average outcomes and matured into a practical yardstick for pricing risk. From 17th‑century probability to modern algorithmic trading and exchange markets, EV connects theoretical chance to real money. In betting, EV translates your beliefs about outcomes into pounds and percentage return, enabling consistent decisions across sports, markets, and time.
+
+### How did we go from classical probability to modern sports markets?
+
+The journey from abstract probability to applied betting analytics followed milestones in mathematics, statistics, and market design. Each step improved how we estimate chances and turn them into actionable prices.
+
+- Origins of expectation (1650s): Pascal and Fermat formalised expected value in correspondence on games of chance (division of stakes).
+- Law of Large Numbers (1713): Jacob Bernoulli showed sample averages converge to true expectations, underpinning EV’s long‑run meaning.
+- Bayesian inference (1763): Bayes and later Laplace introduced updating beliefs with evidence—central to evolving live probabilities.
+- Stochastic modelling (1900–1933): Bachelier’s thesis on price randomness and Kolmogorov’s axioms gave rigorous probability foundations.
+- Kelly criterion (1956): Linked edge and odds to optimal fraction of bankroll, making EV operational for staking under uncertainty.
+- Applied sports models (late 20th century): Poisson goal models and the Dixon–Coles adjustment (1997) improved football forecasting at low scores.
+- Market microstructure (2000s): Betting exchanges (e.g., Betfair, launched 2000) and sharper online books tightened lines and made EV and closing‑line value central performance metrics.
+- Modern toolchain (2010s–today): Public data, expected goals (xG), machine learning, and real‑time odds APIs enabled automated EV calculators and portfolio‑level risk control.
+
+### Why do chi-square “expected counts” differ from betting EV?
+
+In statistics, “expected” in a chi‑square test refers to the number of observations anticipated under a null hypothesis, not profit. Betting EV is a monetary expectation that multiplies probabilities by payoffs. Confusing the two can lead to incorrect pricing conclusions.
+<table><thead><tr><th>Aspect</th><th>Chi‑square expected count</th><th>Betting expected value</th></tr></thead><tbody><tr><td>Primary goal</td><td>Assess goodness‑of‑fit or independence by comparing observed vs expected frequencies.</td><td>Assess profitability of a price by averaging monetary outcomes weighted by true probabilities.</td></tr><tr><td>Unit</td><td>Counts (number of events in categories).</td><td>Currency (£) or return per £ staked (percentage).</td></tr><tr><td>Typical formula</td><td>Goodness‑of‑fit: E<sub>i</sub> = N × p<sub>i,null</sub>; contingency: E<sub>ij</sub> = (row<sub>i</sub> × col<sub>j</sub>) ÷ N.</td><td>EV(£) = s × (p × d − 1); EV% = p × d − 1, with stake s, decimal odds d, true win probability p.</td></tr><tr><td>Null vs belief</td><td>Assumes a specified null distribution (e.g., equal frequencies).</td><td>Uses your best estimate of true outcome probabilities (model‑based or de‑vigged market).</td></tr><tr><td>Decision use</td><td>Hypothesis testing; not a direct pricing or staking tool.</td><td>Pricing, ranking bets, and sizing stakes (e.g., fractional Kelly).</td></tr></tbody></table>
+
+Takeaway: Chi‑square “expected counts” help validate models or detect dependence in historical data. Betting EV prices a future wager by marrying your probability with the offered odds and stake.
+
+### What UK specifics matter: decimal odds, regulation, and safer gambling?
+
+In the UK, EV analysis should reflect local odds conventions, licensing rules, and safer gambling practices. Using correct formats and reliable resources ensures your calculations and decisions match how markets operate domestically.
+
+Decimal and fractional odds:
+ 
+- Decimal odds are widely used online in the UK; fractional remains common in retail and media. Convert consistently before computing EV.
+- Break‑even probability is 1 ÷ decimal odds, or denominator ÷ (numerator + denominator) for fractional.
+
+Regulatory framework:
+ 
+- UK operators must be licensed by the [UK Gambling Commission](https://www.gamblingcommission.gov.uk/), which sets rules on fairness, transparency, and consumer protection.
+- Punters are not taxed on personal betting winnings; operators, not customers, handle applicable duties.
+
+Safer gambling resources:
+ 
+- Guidance and tools: [BeGambleAware](https://www.begambleaware.org/).
+- Support services: [GamCare](https://www.gamcare.org.uk/) provides advice and treatment.
+- 24/7 National Gambling Helpline: [0808 8020 133](tel:+448088020133).
+
+Practical EV considerations in the UK:
+ 
+- Lines can move rapidly around team news and weather; compute EV at the executable price from your licensed operator.
+- Settlement rules (e.g., pushes/voids) and each‑way terms vary; align assumptions before comparing EVs across bookmakers.
+
+## Frequently Asked Questions
+
+### How do I choose stake size from EV using the Kelly criterion?
+
+Use the Kelly fraction f* = (p × d − 1) ÷ (d − 1) to bet a fraction of bankroll; half‑Kelly (0.5 × f*) reduces variance with modest growth trade‑off. Example: with p = 0.46 and d = 2.40, EV per £1 is 0.104, so f* = 0.104 ÷ 1.40 = 0.0743; on a £2,000 bankroll, full Kelly stakes £148.60, half‑Kelly stakes £74.30. This converts a percentage edge into a calibrated stake that maximises expected log growth and keeps drawdown risk in check when probabilities are well estimated.
+
+### How many bets do I need before a positive EV edge becomes statistically reliable?
+
+A rough 95% confidence rule is N ≈ (1.96 × σ ÷ μ)², where μ is EV per £1 staked and σ is the per‑bet standard deviation. For a binary bet with d = 2.40 and p = 0.46, μ = 0.104 and σ ≈ 1.196; N ≈ (1.96 × 1.196 ÷ 0.104)² ≈ 508 independent, equal‑stake bets. This means you need on the order of five hundred similar wagers before your observed average return is likely to sit above zero purely by sampling error considerations.
+
+### How do I calculate EV for an accumulator (parlay) bet?
+
+If legs are independent, EV% for an accumulator equals the product over legs of (p_i × d_i) minus 1. Example with two legs: leg1 p1 = 0.52, d1 = 2.00; leg2 p2 = 0.55, d2 = 1.91; accumulator EV% = (0.52 × 2.00) × (0.55 × 1.91) − 1 = 1.04 × 1.0505 − 1 = 0.0925 (9.25%). Independence is an assumption; positive correlation between legs reduces true EV relative to this product.
+
+### How do I compute EV for UK each‑way bets?
+
+Treat each‑way as two equal stakes: a win bet at the win odds and a place bet at the place terms. Example: horse at decimal d = 6.00 (5/1), each‑way terms 1/5 odds, 3 places, with win probability p_win = 0.18 and place probability including wins p_place = 0.40; the win‑part EV per unit stake is 0.18 × 5 − 0.82 = +0.08, the place‑part EV is 0.40 × (1/5 × 5) − 0.60 = −0.20, so over the combined two‑unit stake EV% = (0.08 − 0.20) ÷ 2 = −0.06 (−6%). This framework lets you plug in your own p_win and p_place to assess value under specific each‑way terms.
+
+### How does exchange commission change break‑even probability and ROI?
+
+Replace d with effective odds d_eff = 1 + (d − 1) × (1 − c), where c is commission on net winnings. Example: back at d = 3.50 with p = 0.33 and c = 0.05 gives d_eff = 1 + 2.5 × 0.95 = 3.375 and ROI% = 0.33 × 3.375 − 1 = +11.38%, compared with +15.50% without commission; commission trims 4.12 percentage points. Break‑even probability becomes 1 ÷ d_eff, here 29.63% instead of 28.57%.
+
+### How do I calculate EV for a lay bet on a betting exchange?
+
+Reference the lay EV to liability: EV% per £ liability = (1 − p) × (1 − c) ÷ (d − 1) − p, where p is the true chance the selection wins, d is lay odds, and c is commission on your net win. Example: laying at d = 4.00 with p = 0.20 and c = 0.05 yields EV% = 0.80 × 0.95 ÷ 3 − 0.20 = 0.2533 − 0.20 = +5.33% per £ of liability; a £300 liability has expected profit £15.99.
+
+### How do pushes or voids (e.g., Asian handicap 0) change the EV calculation?
+
+Include push probability r explicitly; EV% equals p × d + r − 1 when outcomes are win, lose, or push. Example: Asian handicap 0 at d = 1.90 with p(win) = 0.40 and r(push) = 0.30 gives EV% = 0.40 × 1.90 + 0.30 − 1 = 0.76 + 0.30 − 1 = +0.06 (6%). This adjustment prevents bias when a non‑settled outcome returns the stake.
+
+### Should I accept a bookmaker cash‑out and how do I price it?
+
+Compare the offer to the fair ticket value, which equals stake × p_live × d for a back bet, where p_live is your current win probability. Example: stake £50, original odds d = 2.40, live win probability p_live = 0.52 gives fair value £50 × 0.52 × 2.40 = £62.40; an offer of £59.50 is a 4.65% discount. Accepting cash‑out is rational only if the offered amount exceeds your fair value after considering personal risk preferences and any fees.
+
+### What minimum odds do I need for positive EV after commission, and how do boosts change ROI?
+
+With commission c, the break‑even minimum is d_min = 1 + (1 ÷ p − 1) ÷ (1 − c). Example: p = 0.48 and c = 0.05 implies d_min = 1 + (2.0833 − 1) ÷ 0.95 = 2.1403; any effective price above 2.1403 is positive EV. A price boost that increases decimal odds by Δd raises ROI by approximately 100 × p × Δd percentage points; for p = 0.48, a boost from 2.05 to 2.10 (Δd = 0.05) adds about +2.40 percentage points of ROI.
+
+### How sensitive is EV to small errors in my probability estimate?
+
+EV changes linearly with probability error: ΔROI% ≈ 100 × d × Δp. At d = 2.40, a ±0.02 (±2 percentage point) error shifts ROI by about ±4.8 percentage points; a base ROI of +10.4% would drop to +5.6% if your true p is 0.44 rather than 0.46. This sensitivity highlights why calibration and conservative staking are important when estimates are noisy.
+
+### How do I account for limits and price slippage when estimating EV?
+
+Recalculate EV at your volume‑weighted average filled price rather than the screen price. Example: you aim for £500 at 2.50 but fill £200 at 2.50 and £300 at 2.45, so d_avg = (200 × 2.50 + 300 × 2.45) ÷ 500 = 2.47; with p = 0.43, ROI% = 0.43 × 2.47 − 1 = +6.21%, not the +7.50% implied by 2.50. Using executable prices avoids overstating edge due to partial fills and delays.
+
+### Are betting winnings taxed in the UK and does tax affect EV?
+
+In the UK, individuals do not pay income tax on personal betting winnings, so EV and ROI are not reduced by taxation for punters. Only operator duties and fees apply on the book side, while exchange commissions and any third‑party costs are the relevant adjustments to incorporate into EV.
+
+### How can I validate my EV with Closing Line Value (CLV)?
+
+Compute CLV% per bet as d_close ÷ d_bet − 1 after removing vig consistently; a positive mean CLV% with a confidence interval above zero across hundreds of bets is strong evidence your prices beat the market. Example: if mean de‑vigged CLV% is +0.80%, sample standard deviation 3.0%, and N = 500, the standard error is 3.0% ÷ √500 ≈ 0.134%, giving a 95% CI of 0.80% ± 0.26%, which is strictly positive and consistent with a real edge.
+
+### How do quarter‑line Asian handicaps (±0.25, ±0.75) impact EV?
+
+A quarter line splits the stake across two adjacent lines, so EV% is the average of the two component EV%s. Example: −0.25 split as half on 0 at d0 = 1.90 and half on −0.5 at d05 = 2.05 with p(win) = 0.44 and r(push on 0) = 0.28 gives EV% = 0.5 × (0.44 × 2.05 − 1) + 0.5 × (0.44 × 1.90 + 0.28 − 1) = −0.049 + 0.058 = +0.009 (0.9%). This method also covers +0.25 and ±0.75 lines by using the appropriate push and win probabilities.
+
+### How do I price stake‑not‑returned (SNR) and stake‑returned (SR) free bets in EV terms?
+
+An SNR free bet of face value F has EV = F × p × (d − 1), because only winnings are paid; an SR free bet has EV = F × (p × d − 1), because stake is also returned on a win. Example: SNR £20 at d = 3.50 and p = 0.34 yields EV = 20 × 0.34 × 2.5 = £17.00; an SR version at the same terms would be EV = 20 × (0.34 × 3.50 − 1) = £11.00. Using higher payout odds increases SNR EV linearly with (d − 1) for the same p.
