@@ -61,18 +61,10 @@ export default function NotFound() {
             <Link
               key={c.slug}
               href={`/bet-calculator/${c.slug}`}
-              className="rounded-xl p-4 text-left transition-all duration-150 border hover:border-transparent"
+              className="rounded-xl p-4 text-left transition-all duration-150 border hover:border-transparent hover:shadow-[0_4px_16px_rgba(37,99,235,0.15)]"
               style={{
                 background: 'var(--bg-surface)',
                 borderColor: 'var(--border-col)',
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 4px 16px rgba(37,99,235,0.15)'
-                ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'transparent'
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'none'
-                ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--border-col)'
               }}
             >
               <p className="text-xs font-semibold mb-1" style={{ color: 'var(--text-col)' }}>{c.name}</p>

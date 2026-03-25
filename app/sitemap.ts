@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/constants'
 
+export const dynamic = 'force-static'
+
 const calculatorSlugs = [
   'single', 'double', 'treble', 'accumulator',
   'trixie', 'patent', 'yankee', 'super-yankee',
