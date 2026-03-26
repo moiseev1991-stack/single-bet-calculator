@@ -70,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${syne.variable} ${geistMono.variable} h-full`}>
       <head>
+        <meta name="google-site-verification" content="lucuGNfQRoZJ8jQYSy1KDees8jA8M2mplmFRv4BFQ9Y" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
