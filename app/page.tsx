@@ -8,7 +8,7 @@ import { InfoPanel } from '@/components/layout/InfoPanel'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'OddsPilot Single Bet Calculator Official 2026',
+    absolute: 'Single Bet Calculator Official Returns UK 2026 | Free Bet Calculator',
   },
   description:
     'Free Single Bet Calculator for UK bettors. Enter stake and fractional, decimal, or American odds to see return, profit, and implied probability instantly.',

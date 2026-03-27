@@ -14,14 +14,6 @@ export interface CalculatorInfo {
 export const CALCULATORS: CalculatorInfo[] = [
   // Group 1: Main bet calculators
   {
-    slug: 'single',
-    name: 'Single Bet Calculator',
-    shortName: 'Single',
-    group: 1,
-    description: 'Calculate returns for single bets on one or more selections.',
-    numSelectionsRange: [1, 20],
-  },
-  {
     slug: 'double',
     name: 'Double Bet Calculator',
     shortName: 'Double',

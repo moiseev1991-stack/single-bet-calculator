@@ -4,6 +4,19 @@ import Link from 'next/link'
 import { CALCULATORS, CALCULATOR_GROUPS } from '@/lib/constants'
 import { TrendingUp } from 'lucide-react'
 
+const SERVICE_LINKS = [
+  { href: '/about/', label: 'About' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/betting-glossary/', label: 'Betting Glossary' },
+  { href: '/odds-explained/', label: 'Odds Explained' },
+  { href: '/responsible-gambling/', label: 'Responsible Gambling' },
+  { href: '/privacy-policy/', label: 'Privacy Policy' },
+  { href: '/terms-of-service/', label: 'Terms of Service' },
+  { href: '/cookie-policy/', label: 'Cookie Policy' },
+  { href: '/disclaimer/', label: 'Disclaimer' },
+]
+
 const GROUP_COLORS: Record<number, string> = {
   1: 'var(--green)',
   2: 'var(--amber)',
@@ -23,7 +36,7 @@ export function Footer() {
       style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-col)' }}
     >
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div
@@ -74,6 +87,32 @@ export function Footer() {
               </div>
             )
           })}
+
+          {/* Service / Legal */}
+          <div>
+            <h3
+              className="text-[11px] font-semibold uppercase tracking-[.06em] mb-3 flex items-center gap-1.5"
+              style={{ fontFamily: 'var(--font-syne, Syne, sans-serif)' }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--text-muted)' }} />
+              <span style={{ color: 'var(--text-muted)' }}>Info & Legal</span>
+            </h3>
+            <ul className="space-y-1">
+              {SERVICE_LINKS.map(link => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-xs transition-colors duration-150 leading-tight block py-0.5"
+                    style={{ color: 'var(--text-muted)' }}
+                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-col)')}
+                    onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)')}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div
