@@ -11,8 +11,9 @@ const options = {
   preserve_newlines: false,
   wrap_line_length: 0,
   end_with_newline: true,
-  unformatted: ['script', 'style'],
-  extra_liners: [],
+  content_unformatted: ['script', 'style'],
+  extra_liners: ['head', 'body', '/html'],
+  indent_inner_html: true,
 }
 
 function formatHtmlFiles(dir) {
